@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitCycle - Sports & Fitness Equipment Rental</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">FitCycle</div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/rent">Rent</a></li>
+            <li><a href="modules/product/product.html">Shop</a></li>
+            <li><a href="modules/public/about.html">About Us</a></li>
+            <li><a href="modules/public/faq.html">FAQs</a></li>
+          </ul>
+        </nav>
+        <div class="auth-section">
+          <a href="/login" class="auth-button login">Login</a>
+          <a href="/register" class="auth-button register">Register</a>
+          <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Get Quality Sports Equipment from $9/month</h1>
+          <p>
+            Save money and the environment - Try on gear virtually with AR
+            technology
+          </p>
+          <div class="hero-buttons">
+            <a href="/rent" class="btn btn-primary">Start Renting</a>
+            <a href="/shop" class="btn btn-secondary">Browse Products</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="products">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/nike-pegasus.jpg"
+              alt="Nike Air Zoom Pegasus"
+              class="product-image"
+            />
+            <div class="product-info">
+              <span class="product-tag tag-popular">POPULAR</span>
+              <h3>Nike Air Zoom Pegasus</h3>
+              <p>Rent $15/month</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/training-mat.jpg"
+              alt="Adidas Training Mat"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3>Adidas Training Mat</h3>
+              <p>Rent $7/month</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/dumbbells.jpg"
+              alt="Dumbbells 12.5kg Set"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3>Dumbbells 10kg Set</h3>
+              <p>Rent $12/month</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/compression-shirt.jpg"
+              alt="Under Armour Compression Shirt"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3>Under Armour Compression Shirt</h3>
+              <p>Used $22</p>
+              <span class="fitscore">FitScore: 92/100</span>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/yoga-block.jpg"
+              alt="Yoga Block Set"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3>Yoga Block Set</h3>
+              <p>New $15</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/resistance-bands.jpg"
+              alt="Resistance Bands Kit"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3>Resistance Bands Kit</h3>
+              <p>Rent $9/month</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/water-bottle.jpg"
+              alt="Personalized Water Bottle"
+              class="product-image"
+            />
+            <div class="product-info">
+              <span class="product-tag tag-custom">CUSTOM</span>
+              <h3>Personalized Water Bottle</h3>
+              <p>$19</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <img
+              src="assets/images/fproducts/gym-gloves.jpg"
+              alt="Gym Gloves"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3>Gym Gloves</h3>
+              <p>Used $14</p>
+              <span class="fitscore">FitScore: 88/100</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="packages">
+        <h2 class="section-title">Subscription Packages</h2>
+        <div class="packages-grid">
+          <div class="package-card">
+            <h3>Basic</h3>
+            <div class="package-price">$9/month</div>
+            <ul>
+              <li>2 items</li>
+              <li>Weekly exchange</li>
+            </ul>
+            <a href="/subscribe/basic" class="btn btn-primary">Choose Plan</a>
+          </div>
+          <div class="package-card">
+            <h3>Pro</h3>
+            <div class="package-price">$19/month</div>
+            <ul>
+              <li>5 items</li>
+              <li>Free AR scan</li>
+            </ul>
+            <a href="/subscribe/pro" class="btn btn-primary">Choose Plan</a>
+          </div>
+          <div class="package-card">
+            <h3>Elite</h3>
+            <div class="package-price">$39/month</div>
+            <ul>
+              <li>Unlimited items</li>
+              <li>Priority delivery</li>
+            </ul>
+            <a href="/subscribe/elite" class="btn btn-primary">Choose Plan</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <h2 class="section-title">Why Choose FitCycle?</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <i class="fas fa-vr-cardboard"></i>
+            <h3>Virtual try-on with AR technology</h3>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-recycle"></i>
+            <h3>Protect the environment with quality used items</h3>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-truck"></i>
+            <h3>Free delivery within the city</h3>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>FitScore™ quality assurance</h3>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (reuse from homepage) -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="modules/public/about.html">About FitCycle</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/careers">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="/returns">Return Policy</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

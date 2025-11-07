@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs | FitCycle</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/faq.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER (reuse pattern) -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo"><a href="../../index.html">FitCycle</a></div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#">Rent</a></li>
+            <li><a href="../../modules/product/product.html">Shop</a></li>
+            <li><a href="../../modules/public/about.html">About us</a></li>
+            <li>
+              <a href="../../modules/public/faq.html" class="active">FAQs</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="auth-section">
+          <a href="#" class="auth-button login">Login</a>
+          <a href="#" class="auth-button register">Register</a>
+          <a href="../../index.html" class="cart-icon"
+            ><i class="fa fa-shopping-cart"></i
+            ><span class="cart-badge">0</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="faq-main">
+      <!-- HERO -->
+      <section class="faq-hero">
+        <div class="faq-hero-inner">
+          <i class="fa fa-question-circle faq-hero-icon" aria-hidden="true"></i>
+          <h1>Frequently asked questions</h1>
+
+          <div class="faq-search">
+            <input
+              id="faq-search"
+              type="search"
+              placeholder="Search for questions..."
+              aria-label="Search FAQs"
+              autocomplete="off"
+            />
+            <ul
+              id="faq-suggestions"
+              class="suggestions"
+              aria-hidden="true"
+            ></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CATEGORIES (tabs) -->
+      <section class="faq-categories">
+        <div class="tabs" role="tablist" aria-label="FAQ categories">
+          <button
+            class="tab active"
+            data-cat="all"
+            role="tab"
+            aria-selected="true"
+          >
+            All
+          </button>
+          <button class="tab" data-cat="rental" role="tab">
+            About rental service
+          </button>
+          <button class="tab" data-cat="payment" role="tab">Payment</button>
+          <button class="tab" data-cat="delivery" role="tab">
+            Delivery & returns
+          </button>
+          <button class="tab" data-cat="quality" role="tab">
+            Product quality
+          </button>
+          <button class="tab" data-cat="account" role="tab">Account</button>
+        </div>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <section class="faq-list" id="faq-list">
+        <!-- About rental service -->
+        <div class="faq-item" data-cat="rental">
+          <button class="faq-q" aria-expanded="false">
+            How does FitCycle work?
+          </button>
+          <div class="faq-a" hidden>
+            You choose a rental package &gt; Choose equipment &gt; AR try-on
+            (optional) &gt; Receive goods within 24 hours &gt; Use &gt; Exchange
+            or return when the cycle ends. Cleaning and maintenance are
+            completely free.
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="rental">
+          <button class="faq-q" aria-expanded="false">
+            How long can I rent?
+          </button>
+          <div class="faq-a" hidden>
+            Minimum 1 week, no maximum limit. Monthly package is 20% cheaper
+            than weekly package.
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="rental">
+          <button class="faq-q" aria-expanded="false">
+            Is there a fee for changing devices?
+          </button>
+          <div class="faq-a" hidden>
+            Free once a month with Basic package, unlimited with Pro/Elite
+            package.
+          </div>
+        </div>
+
+        <!-- Payment -->
+        <div class="faq-item" data-cat="payment">
+          <button class="faq-q" aria-expanded="false">
+            What payment methods are supported?
+          </button>
+          <div class="faq-a" hidden>
+            VNPAY, Momo, Visa/Mastercard, bank transfer.
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="payment">
+          <button class="faq-q" aria-expanded="false">
+            How is the renewal fee calculated?
+          </button>
+          <div class="faq-a" hidden>
+            Automatically renews on the expiration date. You can cancel at any
+            time before 48 hours.
+          </div>
+        </div>
+
+        <!-- Delivery -->
+        <div class="faq-item" data-cat="delivery">
+          <button class="faq-q" aria-expanded="false">
+            How long does it take to deliver?
+          </button>
+          <div class="faq-a" hidden>
+            Hanoi/HCM city: 3-6 hours. Other provinces: 1-2 days.
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="delivery">
+          <button class="faq-q" aria-expanded="false">Shipping cost?</button>
+          <div class="faq-a" hidden>
+            Free within the city. Province: 30k-50k/turn.
+          </div>
+        </div>
+
+        <!-- Quality -->
+        <div class="faq-item" data-cat="quality">
+          <button class="faq-q" aria-expanded="false">What is FitScore?</button>
+          <div class="faq-a" hidden>
+            0-100 scale to evaluate the newness of used items: 90+ like new,
+            80-89 very good, 70-79 good.
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="quality">
+          <button class="faq-q" aria-expanded="false">
+            Is the rental equipment clean?
+          </button>
+          <div class="faq-a" hidden>
+            100% professionally cleaned after each return, 7-step inspection.
+          </div>
+        </div>
+
+        <!-- Account -->
+        <div class="faq-item" data-cat="account">
+          <button class="faq-q" aria-expanded="false">
+            How to track rental orders?
+          </button>
+          <div class="faq-a" hidden>
+            Go to 'Rental History' in your account, see real-time status.
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="account">
+          <button class="faq-q" aria-expanded="false">
+            I forgot my password?
+          </button>
+          <div class="faq-a" hidden>
+            Click 'Forgot Password' &gt; Enter email &gt; Receive reset link in
+            5 minutes.
+          </div>
+        </div>
+
+        <div class="faq-item" data-cat="account">
+          <button class="faq-q" aria-expanded="false">
+            Is there a mobile app?
+          </button>
+          <div class="faq-a" hidden>
+            No dedicated app yet, but the website is 100% responsive on all
+            devices.
+          </div>
+        </div>
+      </section>
+
+      <!-- STILL HAVE QUESTIONS -->
+      <section class="faq-contact">
+        <h3>Still have questions?</h3>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <i class="fa fa-comments"></i>
+            <div>
+              <strong>Chat with support</strong>
+              <div>8am - 10pm</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <div>support@fitcycle.vn</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <div>
+              <strong>Hotline</strong>
+              <div>1900 xxxx</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER (reuse from homepage) -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="../../modules/public/about.html">About FitCycle</a>
+            </li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/careers">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="/returns">Return Policy</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/faq.js"></script>
+  </body>
+</html>
