@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail | FitCycle</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Main Stylesheet (giống trang chủ) -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <!-- Page-specific Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/product-detail.css" />
+</head>
+
+<body>
+    <!-- HEADER (Giữ giống Homepage + Thêm thanh tìm kiếm) -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">FitCycle</a>
+            <div class="header-center-group">
+                
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Find product, example: 'running shoes'" />
+                </div>
+
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="#">Rent</a></li>
+                        <li>
+                            <a href="../../modules/product/product.html" class="active">Shop</a>
+                        </li>
+                        <li><a href="../../modules/public/about.html">About us</a></li>
+                        <li><a href="../../modules/public/faq.html">FAQs</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-section">
+                    <a href="#" class="auth-button login">Sign in</a>
+                    <a href="#" class="auth-button register">Sign up</a>
+                    <a href="#" class="cart-icon">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-badge">2</span>
+                    </a>
+                </div>
+            </div>
+    </header>
+
+    <main class="detail-main">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumb">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><i class="fa fa-chevron-right"></i></li>
+                <li><a href="../../modules/product/product.html">Shop</a></li>
+                <li><i class="fa fa-chevron-right"></i></li>
+                <li><a href="#">Running shoes</a></li>
+                <li><i class="fa fa-chevron-right"></i></li>
+                <li>Nike Air Zoom Pegasus 41</li>
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT (2 cột) -->
+        <section class="product-detail-layout">
+            <!-- LEFT COLUMN - Image Gallery -->
+            <div class="gallery-container">
+                <div class="main-image-wrapper">
+                    <img src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                        alt="Nike Air Zoom Pegasus main view" class="main-product-image" id="mainImage" />
+                    <span class="product-status-badge">RENTAL</span>
+                </div>
+                <div class="thumbnail-carousel">
+                    <img src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                        alt="Thumbnail 1" class="thumbnail active"
+                        onclick="changeImage('https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817')" />
+
+                    <img src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-2_1160x.jpg?v=1759708821"
+                        alt="Thumbnail 2" class="thumbnail"
+                        onclick="changeImage('https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-2_1160x.jpg?v=1759708821')" />
+
+                    <img src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-3_1160x.jpg?v=1759708817"
+                        alt="Thumbnail 3" class="thumbnail"
+                        onclick="changeImage('https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-3_1160x.jpg?v=1759708817')" />
+
+                    <img src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-4_1160x.jpg?v=1759708818"
+                        alt="Thumbnail 4" class="thumbnail"
+                        onclick="changeImage('https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-4_1160x.jpg?v=1759708818')" />
+
+                    <img src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-5_1160x.jpg?v=1759708818"
+                        alt="Thumbnail 5" class="thumbnail"
+                        onclick="changeImage('https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-5_1160x.jpg?v=1759708818')" />
+                    <div class="thumbnail ar-thumbnail">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>AR</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN - Product Info & CTA -->
+            <div class="info-container">
+                <h1>Nike Air Zoom Pegasus 41</h1>
+                <p class="product-subtitle">
+                    Running Shoes — Stride-supporting design
+                </p>
+
+                <div class="price-section">
+                    <span class="price-rent">Rent $15/month</span>
+                </div>
+
+                <div class="options-section">
+                    <div class="option-group">
+                        <label for="size-select">Size:</label>
+                        <select id="size-select" name="size">
+                            <option value="">Select size</option>
+                            <option value="38">EU 38</option>
+                            <option value="39">EU 39</option>
+                            <option value="40">EU 40</option>
+                            <option value="41">EU 41</option>
+                            <option value="42">EU 42</option>
+                        </select>
+                    </div>
+                    <div class="option-group">
+                        <label>Color:</label>
+                        <div class="color-swatches">
+                            <span class="color-swatch" style="background-color: #000000" data-color="Black"
+                                title="Black"></span>
+                            <span class="color-swatch active" style="background-color: #ffffff; border: 1px solid #ddd"
+                                data-color="White" title="White"></span>
+                            <span class="color-swatch" style="background-color: #e63946" data-color="Red"
+                                title="Red"></span>
+                        </div>
+                    </div>
+                    <div class="option-group">
+                        <label for="quantity-input">Quantity:</label>
+                        <div class="quantity-stepper">
+                            <button type="button" class="quantity-btn minus">-</button>
+                            <input type="number" id="quantity-input" name="quantity" value="1" min="1" />
+                            <button type="button" class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <button type="button" class="btn btn-secondary btn-ar">
+                        <i class="fa-solid fa-cube"></i> Try in AR (Free)
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="showMessage('added-to-cart-msg')">
+                        Rent Now
+                    </button>
+                </div>
+
+                <div class="sub-actions">
+                    <a href="#" class="action-link"><i class="fa-regular fa-heart"></i> Add to Wishlist</a>
+                    <a href="#" class="action-link"><i class="fa-solid fa-share-nodes"></i> Share</a>
+                </div>
+
+                <div class="delivery-notes">
+                    <div class="note-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Free inner-city delivery</span>
+                    </div>
+                    <div class="note-item">
+                        <i class="fa-solid fa-soap"></i>
+                        <span>Professionally cleaned after return</span>
+                    </div>
+                </div>
+
+                <div class="meta-info">
+                    <p>
+                        Estimated delivery:
+                        <strong>Wed, Nov 28 - Thu, Nov 29</strong>
+                    </p>
+                    <p>
+                        Provider:
+                        <a href="#" class="vendor-link">FitCycle Official</a>
+                    </p>
+                    <p>
+                        Policy:
+                        <a href="#" class="vendor-link">24h Quick Return</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB SECTION -->
+        <section class="tab-section">
+            <div class="tab-headers">
+                <button class="tab-link active" onclick="openTab(event, 'tab-description')">
+                    Description
+                </button>
+                <button class="tab-link" onclick="openTab(event, 'tab-specs')">
+                    Specifications
+                </button>
+                <button class="tab-link" onclick="openTab(event, 'tab-policy')">
+                    Policy & Cleaning
+                </button>
+                <button class="tab-link" onclick="openTab(event, 'tab-reviews')">
+                    Reviews (12)
+                </button>
+            </div>
+
+            <div id="tab-description" class="tab-content active">
+                <h3>A Smooth Running Experience</h3>
+                <p>
+                    The Nike Air Zoom Pegasus 41 is your trusted companion for any
+                    distance. With a design that supports your stride and super-light
+                    ZoomX foam, this shoe offers exceptional responsiveness and
+                    energy return.
+                </p>
+                <p>
+                    Rent this product at FitCycle to experience the latest technology
+                    without the commitment of buying. Perfect for upcoming races or
+                    if you want to try before you invest.
+                </p>
+                <ul>
+                    <li>Plush ZoomX cushioning.</li>
+                    <li>Breathable Flyknit upper.</li>
+                    <li>Suitable for both daily training and competition.</li>
+                </ul>
+            </div>
+
+            <div id="tab-specs" class="tab-content">
+                <table class="specs-table">
+                    <tr>
+                        <td>Weight</td>
+                        <td>280g (Size 42)</td>
+                    </tr>
+                    <tr>
+                        <td>Material</td>
+                        <td>Flyknit upper, ZoomX sole</td>
+                    </tr>
+                    <tr>
+                        <td>Heel-toe drop</td>
+                        <td>10mm</td>
+                    </tr>
+                    <tr>
+                        <td>Care</td>
+                        <td>
+                            Wipe clean with a damp cloth, do not machine wash, air
+                            dry.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="tab-policy" class="tab-content">
+                <h3>Rental Policy</h3>
+                <p>
+                    We offer flexible weekly or monthly rental plans. The product is
+                    delivered to you in a professionally cleaned and sanitized
+                    condition.
+                </p>
+                <h3>Cleaning Process</h3>
+                <p>
+                    After each rental, the product undergoes a 7-step deep cleaning
+                    process, ensuring absolute safety and hygiene for the next
+                    customer.
+                </p>
+            </div>
+
+            <div id="tab-reviews" class="tab-content">
+                <div class="reviews-summary">
+                    <span class="total-rating">4.7/5</span>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i>
+                    </div>
+                    <span>(Based on 12 reviews)</span>
+                </div>
+                <div class="review-list">
+                    <div class="review-item">
+                        <div class="review-author">
+                            <img src="https://placehold.co/40x40/E0E7FF/4338CA?text=A" alt="User Avatar" />
+                            <div class="author-info">
+                                <strong>Anh Tuan</strong>
+                                <div class="stars-small">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-body">
+                            The shoes are very comfortable. Rented for 1 month for a race
+                            and it was great. Will rent other models to try.
+                        </p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-author">
+                            <img src="https://placehold.co/40x40/D1FAE5/065F46?text=L" alt="User Avatar" />
+                            <div class="author-info">
+                                <strong>Minh Lan</strong>
+                                <div class="stars-small">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-body">
+                            Bought a used item with FitScore 92 and it still looks very
+                            new. Very satisfied.
+                        </p>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary">
+                    See all 12 reviews
+                </button>
+            </div>
+        </section>
+
+        <!-- RELATED PRODUCTS -->
+        <section class="related-products-section">
+            <h2>You might also like</h2>
+            <div class="related-products-grid">
+                <div class="related-product-card">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/688ee2041c12490cb7ba9ffc957f6209_9366/Y-3_Ultraboost_5_Beige_JR6648_01_02_hover_standard.jpg"
+                        alt="Related Product 1" />
+                    <span class="related-badge">USED</span>
+                    <h3>Adidas Y-3 Ultraboost 5</h3>
+                    <p>Used 1.200k</p>
+                    <a href="#" class="btn btn-small">View Details</a>
+                </div>
+                <div class="related-product-card">
+                    <img src="https://images.asics.com/is/image/asics/1012B765_402_SB_FR_GLB?$zoom$"
+                        alt="Related Product 2" />
+                    <span class="related-badge">NEW</span>
+                    <h3>Novablast 5</h3>
+                    <p>New $134,38</p>
+                    <a href="#" class="btn btn-small">View Details</a>
+                </div>
+                <div class="related-product-card">
+                    <img src="https://placehold.co/200x200/f3f4f6/1f2937?text=Related+3" alt="Related Product 3" />
+                    <span class="related-badge">RENTAL</span>
+                    <h3>Dumbbell Set</h3>
+                    <p>Rent 500k/month</p>
+                    <a href="#" class="btn btn-small">View Details</a>
+                </div>
+                <div class="related-product-card">
+                    <img src="https://placehold.co/200x200/f3f4f6/1f2937?text=Related+4" alt="Related Product 4" />
+                    <span class="related-badge">CUSTOM</span>
+                    <h3>Watch Band</h3>
+                    <p>Personalized 550k</p>
+                    <a href="#" class="btn btn-small">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Giữ giống Homepage) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li>
+                        <a href="../../modules/public/about.html">About FitCycle</a>
+                    </li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/careers">Recruitment</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Policies</h3>
+                <ul>
+                    <li><a href="/returns">Return Policy</a></li>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="/terms">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA -->
+    <div class="sticky-mobile-cta">
+        <div class="mobile-price">
+            <span class="label">Price</span>
+            <span class="price">$15/month</span>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="showMessage('added-to-cart-msg')">
+            Rent Now
+        </button>
+    </div>
+
+    <!-- Microcopy Messages (Modals) -->
+    <div id="added-to-cart-msg" class="microcopy-message" onclick="this.classList.remove('show')">
+        <i class="fa-solid fa-check-circle"></i> Added to cart
+        <a href="#">View cart</a>
+    </div>
+    <div id="select-size-msg" class="microcopy-message warning" onclick="this.classList.remove('show')">
+        <i class="fa-solid fa-warning"></i> Please select a size to continue.
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript for Image Gallery
+        function changeImage(src) {
+            document.getElementById("mainImage").src = src;
+            document.querySelectorAll(".thumbnail").forEach((thumb) => {
+                thumb.classList.remove("active");
+            });
+            event.currentTarget.classList.add("active");
+        }
+
+        // JavaScript for Tabs
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // JavaScript for Quantity Stepper
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".quantity-stepper").forEach((stepper) => {
+                const input = stepper.querySelector("input");
+                const plus = stepper.querySelector(".plus");
+                const minus = stepper.querySelector(".minus");
+
+                plus.addEventListener("click", () => {
+                    input.value = parseInt(input.value) + 1;
+                });
+                minus.addEventListener("click", () => {
+                    if (input.value > 1) {
+                        input.value = parseInt(input.value) - 1;
+                    }
+                });
+            });
+
+            // JavaScript for Color Swatches
+            document.querySelectorAll(".color-swatch").forEach((swatch) => {
+                swatch.addEventListener("click", (e) => {
+                    document
+                        .querySelectorAll(".color-swatch")
+                        .forEach((s) => s.classList.remove("active"));
+                    e.currentTarget.classList.add("active");
+                });
+            });
+
+            // JavaScript for Mobile Nav Toggle
+            const mobileToggle = document.querySelector(".mobile-nav-toggle");
+            const mainNav = document.querySelector(".main-nav");
+            const headerSearch = document.querySelector(".header-search");
+
+            if (mobileToggle) {
+                mobileToggle.addEventListener("click", () => {
+                    mainNav.classList.toggle("active");
+                    headerSearch.classList.toggle("active");
+                });
+            }
+        });
+
+        // JavaScript for Microcopy Messages
+        function showMessage(id) {
+            // Logic to check size
+            const sizeSelect = document.getElementById("size-select");
+            if (sizeSelect && sizeSelect.value === "") {
+                document.getElementById("select-size-msg").classList.add("show");
+                setTimeout(() => {
+                    document
+                        .getElementById("select-size-msg")
+                        .classList.remove("show");
+                }, 3000);
+                return; // Stop if size not selected
+            }
+
+            // Show success message
+            const msg = document.getElementById(id);
+            if (msg) {
+                msg.classList.add("show");
+                setTimeout(() => {
+                    msg.classList.remove("show");
+                }, 3000);
+            }
+        }
+    </script>
+</body>
+
+</html>
