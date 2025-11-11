@@ -1,0 +1,297 @@
+/* =================================
+   CUSTOMER ACCOUNT PAGE STYLES
+   ================================= */
+
+/* Main Layout */
+.account-main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.account-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Left Sidebar Menu */
+.account-sidebar {
+  flex: 0 0 280px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+.account-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-nav a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.account-nav a i {
+  width: 20px;
+  text-align: center;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.account-nav a:hover {
+  background-color: var(--light-gray);
+}
+
+.account-nav a.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.account-nav a.active i {
+  color: var(--white);
+}
+
+.account-nav a.danger-link:hover {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+.account-nav a.danger-link:hover i {
+  color: #ef4444;
+}
+
+/* Right Content Area */
+.account-content {
+  flex: 1;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem 3rem;
+}
+
+.account-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 0.25rem;
+}
+
+.account-subtitle {
+  font-size: 1rem;
+  color: var(--medium-gray);
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+/* Avatar Section */
+.avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.avatar-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--light-gray);
+}
+
+.avatar-actions .btn {
+  padding: 0.6rem 1.2rem;
+}
+
+.help-text {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+/* Profile Form */
+.profile-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 0; /* Handled by grid gap */
+}
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: var(--white);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.disabled-input {
+  position: relative;
+}
+.disabled-input .form-control[disabled] {
+  background-color: var(--light-gray);
+  color: #6b7280;
+  cursor: not-allowed;
+}
+.disabled-input i {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.input-with-suffix {
+  position: relative;
+}
+.input-with-suffix input {
+  padding-right: 3.5rem;
+}
+.input-with-suffix span {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Membership Card */
+.membership-card {
+  grid-column: 1 / -1; /* Span full width */
+  background-color: var(--light-gray);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.membership-badge {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.membership-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.membership-card li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--medium-gray);
+}
+.membership-card li i {
+  color: var(--primary-color);
+}
+.membership-card .form-link {
+  font-weight: 600;
+}
+
+/* Form Actions */
+.form-actions {
+  grid-column: 1 / -1; /* Span full width */
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-top: 1px solid var(--light-gray);
+  padding-top: 2rem;
+  margin-top: 1rem;
+}
+
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+
+  transform: translateY(200%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.toast-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.toast-notification i {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .account-layout {
+    flex-direction: column;
+  }
+  .account-sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 0.5rem;
+  }
+  .account-nav ul {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 0.5rem; /* for scrollbar */
+  }
+  .account-nav a {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    padding: 0.7rem 1rem;
+  }
+  .account-content {
+    padding: 1.5rem;
+  }
+  .profile-form {
+    grid-template-columns: 1fr; /* Stack form inputs */
+  }
+  .membership-card {
+    grid-column: auto;
+  }
+  .form-actions {
+    grid-column: auto;
+  }
+}

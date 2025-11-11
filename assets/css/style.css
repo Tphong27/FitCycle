@@ -8,6 +8,7 @@
   --white: #ffffff;
   --light-gray: #f3f4f6;
   --badge-red: #ef4444;
+  --border-color: #e5e7eb;
 }
 
 * {
@@ -78,7 +79,6 @@ ul {
 .header {
   z-index: 2000;
 }
-
 
 .header-content {
   max-width: 1200px;
@@ -188,6 +188,20 @@ ul {
   font-size: 0.75rem;
 }
 
+/* Logged-in Header */
+.auth-section.logged-in {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.user-avatar-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--border-color);
+}
+
 /* =================================
    FOOTER (Chung)
    ================================= */
@@ -246,7 +260,6 @@ ul {
    RESPONSIVE (Chung)
    ================================= */
 @media (max-width: 768px) {
-
   /* Chỉ giữ lại các quy tắc responsive cho header */
   .header-content {
     flex-direction: column;

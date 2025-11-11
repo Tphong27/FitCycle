@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Up Your Profile | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/auth.css" />
+    <link rel="stylesheet" href="../../assets/css/profile-setup.css" />
+  </head>
+
+  <body class="auth-body">
+    <div class="setup-container">
+      <div class="progress-bar">
+        <div class="progress-step active" data-step="1">
+          <div class="progress-step-icon">1</div>
+          <span>Basic Info</span>
+        </div>
+        <div class="progress-step" data-step="2">
+          <div class="progress-step-icon">2</div>
+          <span>Interests</span>
+        </div>
+        <div class="progress-step" data-step="3">
+          <div class="progress-step-icon">3</div>
+          <span>Sizing</span>
+        </div>
+      </div>
+
+      <div class="wizard-container">
+        <div class="wizard-step active" data-step="1">
+          <h2>Basic Information</h2>
+          <p>Let's get to know you.</p>
+          <form class="setup-form" id="step1Form">
+            <div class="avatar-uploader">
+              <input type="file" id="avatarUpload" accept="image/*" hidden />
+              <label
+                for="avatarUpload"
+                class="avatar-preview"
+                id="avatarPreview"
+              >
+                <i class="fa-solid fa-camera"></i>
+                <span>Upload Photo</span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label
+                  ><input type="radio" name="gender" value="male" /> Male</label
+                >
+                <label
+                  ><input type="radio" name="gender" value="female" />
+                  Female</label
+                >
+                <label
+                  ><input type="radio" name="gender" value="other" />
+                  Other</label
+                >
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" class="form-control" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="height">Height</label>
+                <div class="input-with-suffix">
+                  <input
+                    type="number"
+                    id="height"
+                    class="form-control"
+                    placeholder="170"
+                  />
+                  <span>cm</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="weight">Weight</label>
+                <div class="input-with-suffix">
+                  <input
+                    type="number"
+                    id="weight"
+                    class="form-control"
+                    placeholder="65"
+                  />
+                  <span>kg</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-primary" id="next-step-1">
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="wizard-step" data-step="2">
+          <h2>Sports Interests</h2>
+          <p>
+            What kind of sports are you interested in? (Select all that apply)
+          </p>
+          <form class="setup-form" id="step2Form">
+            <div class="interest-grid">
+              <div class="interest-card" data-interest="running">
+                <span>🏃 Running</span>
+              </div>
+              <div class="interest-card" data-interest="gym">
+                <span>🏋️ Gym/Fitness</span>
+              </div>
+              <div class="interest-card" data-interest="yoga">
+                <span>🧘 Yoga/Pilates</span>
+              </div>
+              <div class="interest-card" data-interest="swimming">
+                <span>🏊 Swimming</span>
+              </div>
+              <div class="interest-card" data-interest="cycling">
+                <span>🚴 Cycling</span>
+              </div>
+              <div class="interest-card" data-interest="basketball">
+                <span>🏀 Basketball</span>
+              </div>
+              <div class="interest-card" data-interest="football">
+                <span>⚽ Football</span>
+              </div>
+              <div class="interest-card" data-interest="tennis">
+                <span>🎾 Tennis</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="goal">What is your primary goal?</label>
+              <select id="goal" class="form-control">
+                <option value="">Select a goal...</option>
+                <option value="lose_weight">Lose Weight</option>
+                <option value="build_muscle">Build Muscle</option>
+                <option value="maintain_health">Maintain Health</option>
+                <option value="improve_endurance">Improve Endurance</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="frequency">How often do you train?</label>
+              <select id="frequency" class="form-control">
+                <option value="">Select frequency...</option>
+                <option value="1-2">1-2 times/week</option>
+                <option value="3-4">3-4 times/week</option>
+                <option value="5+">5+ times/week</option>
+              </select>
+            </div>
+
+            <div class="step-nav">
+              <button type="button" class="btn btn-secondary" id="prev-step-2">
+                Back
+              </button>
+              <button type="button" class="btn btn-primary" id="next-step-2">
+                Next
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="wizard-step" data-step="3">
+          <h2>Sizing & AR Scan</h2>
+
+          <div id="ar-scan-section">
+            <div
+              class="auth-illustration"
+              style="background: #f9fafb; border: 1px solid #e5e7eb"
+            >
+              <i
+                class="fa-solid fa-mobile-screen-button"
+                style="font-size: 60px; color: var(--primary-color)"
+              ></i>
+              <i
+                class="fa-solid fa-person"
+                style="font-size: 90px; color: #9ca3af; margin-left: 1rem"
+              ></i>
+            </div>
+            <p>Use AR Body Scan for precise size recommendations.</p>
+            <button
+              type="button"
+              class="btn btn-primary auth-btn-full"
+              id="start-ar-scan"
+            >
+              <i class="fa-solid fa-camera"></i> Start Camera Scan
+            </button>
+            <a href="#" class="form-link" id="skip-ar-link"
+              >Skip, I'll enter manually</a
+            >
+          </div>
+
+          <form
+            class="setup-form"
+            id="manual-sizing-form"
+            style="display: none"
+          >
+            <p>Please provide your standard sizing.</p>
+            <div class="form-group">
+              <label for="shirt-size">Shirt Size</label>
+              <select id="shirt-size" class="form-control">
+                <option value="">Select size...</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="shoe-size">Shoe Size (EU)</label>
+              <select id="shoe-size" class="form-control">
+                <option value="">Select size...</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pants-size">Pants Size</label>
+              <select id="pants-size" class="form-control">
+                <option value="">Select size...</option>
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+                <option value="xxl">XXL</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-secondary" id="prev-step-3">
+              Back
+            </button>
+            <button type="button" class="btn btn-primary" id="complete-setup">
+              Complete Setup
+            </button>
+          </div>
+        </div>
+
+        <div class="wizard-step setup-success-card" data-step="success">
+          <div class="auth-card-icon success">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <h2>Profile Set Up!</h2>
+          <p>
+            You've received a 50% discount for your first order:
+            <strong class="promo-code">WELCOME50</strong>
+          </p>
+          <a href="../../index.html" class="btn btn-primary auth-btn-full"
+            >Discover Now</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/profile-setup.js"></script>
+  </body>
+</html>
