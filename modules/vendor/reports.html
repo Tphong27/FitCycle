@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Reports | FitCycle Vendor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/vendor.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body class="vendor-body">
+    <div class="vendor-layout">
+      <aside class="vendor-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="vendor-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="reports.html" class="active"
+                ><i class="fa-solid fa-chart-line"></i> Sales Reports</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-truck-fast"></i> Shipments</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="vendor-main">
+        <header class="vendor-header">
+          <h1>Sales Reports</h1>
+          <div class="vendor-profile">
+            <a href="add-product.html" class="btn btn-primary btn-small"
+              ><i class="fa-solid fa-plus"></i> Add New Product</a
+            >
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/f0abfc/4a044e?text=V"
+                alt="Vendor"
+                class="user-avatar-img"
+              />
+              <span>Nike Official</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="vendor-content">
+          <div class="report-header">
+            <div class="form-group">
+              <label for="date-range">Select Date Range</label>
+              <select id="date-range" class="form-control">
+                <option value="30">Last 30 days</option>
+                <option value="90">Last 90 days</option>
+                <option value="year">This Year</option>
+                <option value="all">All Time</option>
+              </select>
+            </div>
+            <button class="btn btn-secondary btn-small">
+              <i class="fa-solid fa-download"></i> Export CSV
+            </button>
+          </div>
+
+          <section class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-icon payout">
+                <i class="fa-solid fa-wallet"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Pending Payout</span>
+                <span class="stat-value">$1,280.00</span>
+                <span class="stat-change">Next payout: Nov 20, 2025</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon revenue">
+                <i class="fa-solid fa-sack-dollar"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Gross Sales (30d)</span>
+                <span class="stat-value">$3,500.00</span>
+                <span class="stat-change positive">+8.1%</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon commission">
+                <i class="fa-solid fa-percent"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Commissions Paid (30d)</span>
+                <span class="stat-value">$700.00</span>
+                <span class="stat-change">(20% rate)</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon orders">
+                <i class="fa-solid fa-clipboard-list"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Items Sold (30d)</span>
+                <span class="stat-value">42</span>
+                <span class="stat-change">15 Rentals, 27 Sales</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="widget-grid">
+            <div class="widget-card full-width">
+              <h3>Gross Revenue vs. Net Payout (30 days)</h3>
+              <div class="chart-container">
+                <canvas id="revenueReportChart"></canvas>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3>Top Earning Products (30d)</h3>
+              <div class="table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Product</th>
+                      <th>Items Sold</th>
+                      <th>Total Revenue</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Nike Air Zoom Pegasus 41</td>
+                      <td>12</td>
+                      <td>$180.00 (Rental)</td>
+                    </tr>
+                    <tr>
+                      <td>UA Compression Shirt</td>
+                      <td>8</td>
+                      <td>$176.00 (Used)</td>
+                    </tr>
+                    <tr>
+                      <td>New Running Shoe (Draft)</td>
+                      <td>5</td>
+                      <td>$600.00 (New)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3>Payout History</h3>
+              <div class="table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Date</th>
+                      <th>Amount</th>
+                      <th>Method</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Oct 20, 2025</td>
+                      <td>$1,120.00</td>
+                      <td>Bank Transfer</td>
+                      <td><span class="status-badge delivered">Paid</span></td>
+                    </tr>
+                    <tr>
+                      <td>Sep 20, 2025</td>
+                      <td>$980.50</td>
+                      <td>Bank Transfer</td>
+                      <td><span class="status-badge delivered">Paid</span></td>
+                    </tr>
+                    <tr>
+                      <td>Aug 20, 2025</td>
+                      <td>$1,050.00</td>
+                      <td>Bank Transfer</td>
+                      <td><span class="status-badge delivered">Paid</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../assets/js/vendor.js"></script>
+  </body>
+</html>

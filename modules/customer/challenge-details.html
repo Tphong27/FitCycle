@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Details | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/account.css" />
+    <link rel="stylesheet" href="../../assets/css/challenges.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">FitCycle</a>
+        <div class="header-center-group">
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Find product, example: 'running shoes'"
+            />
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../public/subscription-plans.html">Rent</a></li>
+              <li><a href="../../modules/product/product.html">Shop</a></li>
+              <li><a href="../../modules/public/about.html">About Us</a></li>
+              <li><a href="../../modules/public/faq.html">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="auth-section logged-in">
+          <a href="cart.html" class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-badge">3</span>
+          </a>
+          <a href="account.html" class="user-avatar-link">
+            <img
+              src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+              alt="User Avatar"
+              class="user-avatar-img"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="account-main">
+      <div class="account-layout">
+        <aside class="account-sidebar">
+          <nav class="account-nav">
+            <ul>
+              <li>
+                <a href="account.html"
+                  ><i class="fa-solid fa-user-pen"></i> Personal Info</a
+                >
+              </li>
+              <li>
+                <a href="rental-history.html"
+                  ><i class="fa-solid fa-clock-rotate-left"></i> Rental
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="personalize.html"
+                  ><i class="fa-solid fa-wand-magic-sparkles"></i> Personalize
+                  Gear</a
+                >
+              </li>
+              <li>
+                <a href="challenges.html" class="active"
+                  ><i class="fa-solid fa-trophy"></i> Challenges</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-truck"></i> Shipping Addresses</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-lock"></i> Change Password</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-heart"></i> My Interests</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-ruler"></i> Body Sizing</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+              </li>
+              <li>
+                <a href="#" class="danger-link"
+                  ><i class="fa-solid fa-trash-can"></i> Delete Account</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="account-content">
+          <a
+            href="challenges.html"
+            class="back-link"
+            style="margin-bottom: 1rem"
+          >
+            <i class="fa-solid fa-arrow-left"></i> Back to Challenges
+          </a>
+
+          <div class="challenge-detail-hero">
+            <img
+              src="https://runforyourlife.uk/wp-content/uploads/2023/03/50km-pace-charts.webp"
+              alt="Running Challenge"
+            />
+            <div class="hero-overlay-content">
+              <span class="challenge-card-badge running">🏃 Running</span>
+              <p>
+                Run a total of 50km before the month ends to earn a 10% voucher!
+              </p>
+              <button class="btn btn-primary" id="joinChallengeBtn">
+                <i class="fa-solid fa-plus"></i> Join Challenge
+              </button>
+            </div>
+          </div>
+
+          <div class="challenge-detail-layout">
+            <div class="challenge-detail-main">
+              <div class="detail-box">
+                <h3><i class="fa-solid fa-scroll"></i> Rules & Details</h3>
+                <p>
+                  This challenge is open to all Pro and Elite members. All runs
+                  must be logged via a connected device (Apple Watch, Garmin) or
+                  manually to count towards the total.
+                </p>
+                <ul>
+                  <li><strong>Goal:</strong> Run a total of 50 kilometers.</li>
+                  <li><strong>Start Date:</strong> Nov 01, 2025</li>
+                  <li><strong>End Date:</strong> Nov 30, 2025 (11:59 PM)</li>
+                </ul>
+              </div>
+              <div class="detail-box">
+                <h3><i class="fa-solid fa-gift"></i> Rewards</h3>
+                <p>Upon successful completion, you will receive:</p>
+                <ul>
+                  <li>
+                    A <strong>10% discount voucher</strong> valid for any rental
+                    or purchase.
+                  </li>
+                  <li>
+                    A <strong>"November Runner"</strong> badge on your profile.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="challenge-detail-sidebar">
+              <div class="leaderboard-box">
+                <h3><i class="fa-solid fa-ranking-star"></i> Leaderboard</h3>
+                <p>1,204 Participants</p>
+                <ul class="leaderboard-list">
+                  <li>
+                    <img
+                      src="https://placehold.co/40x40/D1FAE5/065F46?text=M"
+                      alt="Minh Anh"
+                    />
+                    <span>1. Minh Anh</span>
+                    <strong>48.2 km</strong>
+                  </li>
+                  <li>
+                    <img
+                      src="https://placehold.co/40x40/E0E7FF/4338CA?text=H"
+                      alt="Hoang Long"
+                    />
+                    <span>2. Hoang Long</span>
+                    <strong>45.1 km</strong>
+                  </li>
+                  <li>
+                    <img
+                      src="https://placehold.co/40x40/FEF3C7/92400E?text=T"
+                      alt="Thu Ha"
+                    />
+                    <span>3. Thu Ha</span>
+                    <strong>42.0 km</strong>
+                  </li>
+                  <li>
+                    <img
+                      src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+                      alt="User"
+                    />
+                    <span><strong>4. (You)</strong></span>
+                    <strong>35.5 km</strong>
+                  </li>
+                  <li>
+                    <span>...</span>
+                  </li>
+                  <li>
+                    <span>1204. Tuan Le</span>
+                    <strong>0.5 km</strong>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="auth-modal-overlay" id="joinSuccessModal" style="display: none">
+      <div class="auth-modal">
+        <div class="modal-icon">
+          <i class="fa-solid fa-check-circle"></i>
+        </div>
+        <h2 class="modal-title">Challenge Joined!</h2>
+        <p class="modal-message">
+          "The 50km November Run" has been added to your profile. Good luck!
+        </p>
+        <a
+          href="challenges.html?tab=my-progress"
+          class="btn btn-primary modal-btn"
+          >View My Progress</a
+        >
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="../../modules/public/about.html">About FitCycle</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/challenge-details.js"></script>
+  </body>
+</html>

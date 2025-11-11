@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Products | FitCycle Vendor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/vendor.css" />
+  </head>
+
+  <body class="vendor-body">
+    <div class="vendor-layout">
+      <aside class="vendor-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="vendor-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html" class="active"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-chart-line"></i> Sales Reports</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-truck-fast"></i> Shipments</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="vendor-main">
+        <header class="vendor-header">
+          <h1>My Products</h1>
+          <div class="vendor-profile">
+            <button class="btn btn-primary btn-small">
+              <i class="fa-solid fa-plus"></i> Add New Product
+            </button>
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/f0abfc/4a044e?text=V"
+                alt="Vendor"
+                class="user-avatar-img"
+              />
+              <span>Nike Official</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="vendor-content">
+          <div class="widget-card full-width">
+            <div class="product-filters">
+              <div class="product-tabs">
+                <button class="tab-btn active">
+                  All <span class="count-badge">20</span>
+                </button>
+                <button class="tab-btn">
+                  Active <span class="count-badge">18</span>
+                </button>
+                <button class="tab-btn">
+                  Pending <span class="count-badge">2</span>
+                </button>
+                <button class="tab-btn">
+                  Out of Stock <span class="count-badge">1</span>
+                </button>
+              </div>
+              <div class="product-search-bar">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search by name or SKU..."
+                />
+                <button class="btn btn-secondary btn-small">
+                  <i class="fa-solid fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>Product</th>
+                    <th>SKU</th>
+                    <th>Type</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                          alt="Pegasus 41"
+                          class="product-table-img"
+                        />
+                        <span>Nike Air Zoom Pegasus 41</span>
+                      </div>
+                    </td>
+                    <td>NK-PEG41-WHT-42</td>
+                    <td>Rental</td>
+                    <td>15</td>
+                    <td>$15.00/mo</td>
+                    <td><span class="status-badge delivered">Active</span></td>
+                    <td>
+                      <button class="action-btn edit">
+                        <i class="fa-solid fa-pen"></i>
+                      </button>
+                      <button class="action-btn delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="../../assets/images/fproducts/compression-shirt.jpg"
+                          alt="UA Shirt"
+                          class="product-table-img"
+                        />
+                        <span>UA Compression Shirt</span>
+                      </div>
+                    </td>
+                    <td>UA-COMP-MD-BLK</td>
+                    <td>Used</td>
+                    <td>1</td>
+                    <td>$22.00</td>
+                    <td><span class="status-badge warning">Low Stock</span></td>
+                    <td>
+                      <button class="action-btn edit">
+                        <i class="fa-solid fa-pen"></i>
+                      </button>
+                      <button class="action-btn delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://placehold.co/50x50/f3f4f6/1f2937?text=New+Shoe"
+                          alt="New Shoe"
+                          class="product-table-img"
+                        />
+                        <span>New Running Shoe (Draft)</span>
+                      </div>
+                    </td>
+                    <td>NEW-RUN-001</td>
+                    <td>New</td>
+                    <td>100</td>
+                    <td>$120.00</td>
+                    <td>
+                      <span class="status-badge processing">Pending</span>
+                    </td>
+                    <td>
+                      <button class="action-btn edit">
+                        <i class="fa-solid fa-pen"></i>
+                      </button>
+                      <button class="action-btn delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

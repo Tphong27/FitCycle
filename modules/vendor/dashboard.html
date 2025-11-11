@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vendor Dashboard | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/vendor.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body class="vendor-body">
+    <div class="vendor-layout">
+      <aside class="vendor-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="vendor-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html" class="active"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-box-archive"></i> Products</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-chart-line"></i> Sales Reports</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-truck-fast"></i> Shipments</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="vendor-main">
+        <header class="vendor-header">
+          <h1>Dashboard</h1>
+          <div class="vendor-profile">
+            <button class="btn btn-primary btn-small">
+              <i class="fa-solid fa-plus"></i> Add New Product
+            </button>
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/f0abfc/4a044e?text=V"
+                alt="Vendor"
+                class="user-avatar-img"
+              />
+              <span>Nike Official</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="vendor-content">
+          <section class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-icon revenue">
+                <i class="fa-solid fa-dollar-sign"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Total Revenue</span>
+                <span class="stat-value">$14,820.50</span>
+                <span class="stat-change positive">+5.2% vs. last month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon orders">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">New Orders</span>
+                <span class="stat-value">35</span>
+                <span class="stat-change negative">-1.8% vs. last month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon products">
+                <i class="fa-solid fa-box-archive"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Active Products</span>
+                <span class="stat-value">128</span>
+                <span class="stat-change">2 new pending</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon ratings">
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Average Rating</span>
+                <span class="stat-value">4.85</span>
+                <span class="stat-change">Based on 210 reviews</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="widget-grid">
+            <div class="widget-card full-width">
+              <h3>Revenue (Last 30 Days)</h3>
+              <div class="chart-container">
+                <canvas id="salesChart"></canvas>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3>Recent Orders</h3>
+              <div class="table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>Product</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#FC-1025</td>
+                      <td>Nike Pegasus 41</td>
+                      <td>$15.00</td>
+                      <td><span class="status-badge shipped">Shipped</span></td>
+                    </tr>
+                    <tr>
+                      <td>#FC-1024</td>
+                      <td>Adidas Training Mat</td>
+                      <td>$7.00</td>
+                      <td>
+                        <span class="status-badge processing">Processing</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#FC-1023</td>
+                      <td>Lululemon Align Pant (Used)</td>
+                      <td>$42.00</td>
+                      <td>
+                        <span class="status-badge delivered">Delivered</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3>Low Stock Products</h3>
+              <div class="table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>SKU</th>
+                      <th>Product Name</th>
+                      <th>Stock</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>NK-PEG41-BL-42</td>
+                      <td>Nike Pegasus 41 (Blue, 42)</td>
+                      <td>3</td>
+                      <td>
+                        <span class="status-badge danger">Low Stock</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>UA-COMP-MD</td>
+                      <td>UA Compression Shirt (M)</td>
+                      <td>1</td>
+                      <td>
+                        <span class="status-badge danger">Out of Stock</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>DB-SET-10KG</td>
+                      <td>Dumbbells 10kg Set</td>
+                      <td>5</td>
+                      <td>
+                        <span class="status-badge warning">Low Stock</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../assets/js/vendor.js"></script>
+  </body>
+</html>

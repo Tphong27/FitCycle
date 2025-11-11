@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Product | FitCycle Vendor</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/vendor.css" />
+  </head>
+
+  <body class="vendor-body">
+    <div class="vendor-layout">
+      <aside class="vendor-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="vendor-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html" class="active"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-chart-line"></i> Sales Reports</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-truck-fast"></i> Shipments</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="vendor-main">
+        <header class="vendor-header">
+          <div class="header-breadcrumb">
+            <a href="products.html" class="breadcrumb-link">Products</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <h1>Add New Product</h1>
+          </div>
+          <div class="vendor-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/f0abfc/4a044e?text=V"
+                alt="Vendor"
+                class="user-avatar-img"
+              />
+              <span>Nike Official</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="vendor-content">
+          <form class="form-layout">
+            <div class="form-col-main">
+              <div class="widget-card">
+                <h3>Basic Information</h3>
+                <div class="form-group">
+                  <label for="product-name">Product Name</label>
+                  <input
+                    type="text"
+                    id="product-name"
+                    class="form-control"
+                    placeholder="e.g., Nike Air Zoom Pegasus 41"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-sku">SKU (Stock Keeping Unit)</label>
+                  <input
+                    type="text"
+                    id="product-sku"
+                    class="form-control"
+                    placeholder="NK-PEG41-WHT-42"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-description">Description</label>
+                  <textarea
+                    id="product-description"
+                    class="form-control"
+                    rows="6"
+                    placeholder="Describe your product..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="widget-card">
+                <h3>Media</h3>
+                <div class="image-upload-zone">
+                  <input type="file" id="image-upload" multiple hidden />
+                  <label for="image-upload">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <strong>Drag & drop or click to upload</strong>
+                    <span>PNG, JPG or GIF (max. 800x800px)</span>
+                  </label>
+                </div>
+                <div class="image-preview-grid">
+                  <div class="image-preview">
+                    <img
+                      src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                      alt="preview"
+                    /><button class="delete-img">&times;</button>
+                  </div>
+                  <div class="image-preview">
+                    <img
+                      src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-2_1160x.jpg?v=1759708821"
+                      alt="preview"
+                    /><button class="delete-img">&times;</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="widget-card">
+                <h3>Pricing & Stock</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="product-type">Product Type</label>
+                    <select id="product-type" class="form-control">
+                      <option value="Rental">Rental</option>
+                      <option value="New">New (for sale)</option>
+                      <option value="SecondHand">Second-Hand (for sale)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="product-stock">Stock Quantity</label>
+                    <input
+                      type="number"
+                      id="product-stock"
+                      class="form-control"
+                      placeholder="100"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="product-price">Sale Price (VND / $)</label>
+                    <input
+                      type="text"
+                      id="product-price"
+                      class="form-control"
+                      placeholder="e.g., 2,500,000"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="product-rental-price"
+                      >Rental Price (per month)</label
+                    >
+                    <input
+                      type="text"
+                      id="product-rental-price"
+                      class="form-control"
+                      placeholder="e.g., 350,000"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-col-sidebar">
+              <div class="widget-card">
+                <h3>Organization</h3>
+                <div class="form-group">
+                  <label for="product-brand">Brand</label>
+                  <input
+                    type="text"
+                    id="product-brand"
+                    class="form-control"
+                    value="Nike Official"
+                    disabled
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="product-category">Category</label>
+                  <select id="product-category" class="form-control">
+                    <option value="">Select a category</option>
+                    <option value="running">Running Shoes</option>
+                    <option value="apparel">Apparel</option>
+                    <option value="equipment">Equipment</option>
+                    <option value="accessories">Accessories</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="product-tags">Tags (comma-separated)</label>
+                  <input
+                    type="text"
+                    id="product-tags"
+                    class="form-control"
+                    placeholder="Running, Pegasus, Nike"
+                  />
+                </div>
+                <div class="form-group">
+                  <label>Status</label>
+                  <div class="radio-group-vertical">
+                    <label
+                      ><input
+                        type="radio"
+                        name="status"
+                        value="active"
+                        checked
+                      />
+                      Active</label
+                    >
+                    <label
+                      ><input type="radio" name="status" value="draft" />
+                      Draft</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="widget-card">
+                <h3>Specifications</h3>
+                <p class="form-help-text">Add size, color, material, etc.</p>
+                <div class="spec-list" id="specList">
+                  <div class="form-row">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="e.g., Color"
+                    />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="e.g., White/Blue"
+                    />
+                  </div>
+                  <div class="form-row">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="e.g., Size"
+                    />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="e.g., 42"
+                    />
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-full"
+                  id="addSpecBtn"
+                >
+                  <i class="fa-solid fa-plus"></i> Add Specification
+                </button>
+              </div>
+            </div>
+
+            <div class="form-actions-sticky">
+              <button type="button" class="btn btn-secondary">Discard</button>
+              <button type="submit" class="btn btn-primary">
+                Save Product
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../assets/js/vendor.js"></script>
+  </body>
+</html>

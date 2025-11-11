@@ -787,6 +787,124 @@ body {
   color: var(--dark-gray);
 }
 
+/* =================================
+   VIRTUAL TRY-ON (AR) MODAL
+   ================================= */
+
+.ar-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  padding: 1rem;
+}
+
+.ar-modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 500px; /* Tăng chiều rộng để camera feed thoải mái hơn */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.ar-modal .modal-close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #9ca3af;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+}
+
+.ar-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.ar-modal-header i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+.ar-modal-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.ar-modal-body {
+  padding: 2rem;
+  text-align: center;
+}
+
+.ar-camera-feed {
+  width: 100%;
+  aspect-ratio: 3/4; /* Tỷ lệ khung hình điện thoại */
+  background: var(--dark-gray);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+}
+
+.ar-camera-feed .camera-icon-placeholder {
+  font-size: 5rem;
+  color: #374151; /* Màu tối hơn trên nền đen */
+}
+
+.ar-camera-feed p {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin: 0.5rem 1rem 0 1rem;
+}
+
+/* Đây là hình ảnh sản phẩm AR (giày) mô phỏng */
+.ar-product-overlay {
+  position: absolute;
+  width: 80%;
+  bottom: 10%; /* Đặt giày ở dưới */
+  left: 10%;
+  opacity: 0.9;
+  transform: rotate(-15deg); /* Hơi nghiêng cho tự nhiên */
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+.ar-product-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  margin-top: 1.5rem;
+}
+
+.ar-modal-footer {
+  padding: 1.5rem 2rem;
+  background: var(--light-gray);
+  text-align: right;
+  border-top: 1px solid var(--border-color);
+}
+.ar-modal-footer .btn {
+  width: 100%;
+  padding: 0.9rem;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
   .header-search {
@@ -799,7 +917,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   /* Mobile Header */
   .header-content {
     flex-wrap: wrap;
@@ -931,4 +1048,132 @@ body {
     text-align: center;
     justify-content: center;
   }
+}
+
+/* --- REVIEW ACTIONS (NEW) --- */
+.review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.review-actions .btn {
+  width: auto;
+  flex-grow: 1; /* Make buttons fill space on mobile */
+}
+.review-actions .btn i {
+  margin-right: 0.5rem;
+}
+
+/* =================================
+   ADD REVIEW MODAL
+   ================================= */
+
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5000;
+  padding: 1rem;
+}
+
+.review-modal {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 2.5rem;
+}
+
+.review-modal .modal-close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: #9ca3af;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 10;
+}
+
+.review-modal h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.review-modal p {
+  font-size: 1rem;
+  color: var(--medium-gray);
+  margin: 0.5rem 0 2rem 0;
+}
+
+.review-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.review-form .form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.review-form .form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--white);
+  font-family: var(--font-main);
+}
+
+.review-form .form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Star Rating Input */
+.star-rating-input {
+  font-size: 2rem;
+  color: #d1d5db; /* Inactive star color */
+}
+.star-rating-input .fa-star {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.star-rating-input .fa-star.hover,
+.star-rating-input .fa-star.active {
+  color: #f59e0b; /* Active star color */
+}
+
+.review-modal .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.review-modal .modal-actions .btn {
+  width: auto;
+  padding: 0.8rem 1.5rem;
 }

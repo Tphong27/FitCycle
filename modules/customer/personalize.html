@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalize Your Gear | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/account.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">FitCycle</a>
+        <div class="header-center-group">
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Find product, example: 'running shoes'"
+            />
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../public/subscription-plans.html">Rent</a></li>
+              <li><a href="../../modules/product/product.html">Shop</a></li>
+              <li><a href="../../modules/public/about.html">About Us</a></li>
+              <li><a href="../../modules/public/faq.html">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="auth-section logged-in">
+          <a href="cart.html" class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-badge">3</span>
+          </a>
+          <a href="account.html" class="user-avatar-link">
+            <img
+              src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+              alt="User Avatar"
+              class="user-avatar-img"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="account-main">
+      <div class="account-layout">
+        <aside class="account-sidebar">
+          <nav class="account-nav">
+            <ul>
+              <li>
+                <a href="account.html"
+                  ><i class="fa-solid fa-user-pen"></i> Personal Info</a
+                >
+              </li>
+              <li>
+                <a href="rental-history.html"
+                  ><i class="fa-solid fa-clock-rotate-left"></i> Rental
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="personalize.html" class="active"
+                  ><i class="fa-solid fa-wand-magic-sparkles"></i> Personalize
+                  Gear</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-truck"></i> Shipping Addresses</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-lock"></i> Change Password</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-heart"></i> My Interests</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-ruler"></i> Body Sizing</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+              </li>
+              <li>
+                <a href="#" class="danger-link"
+                  ><i class="fa-solid fa-trash-can"></i> Delete Account</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="account-content">
+          <h1>Personalize Your Gear</h1>
+          <p class="account-subtitle">
+            Add your name, logo, or custom text to make it uniquely yours.
+          </p>
+
+          <div class="personalize-grid">
+            <div class="personalize-card">
+              <div class="personalize-card-img">
+                <img
+                  src="../../assets/images/fproducts/water-bottle.jpg"
+                  alt="Water Bottle"
+                />
+              </div>
+              <div class="personalize-card-content">
+                <h3>Personalized Water Bottle</h3>
+                <p>
+                  Engrave your name or logo. Stainless steel, 500ml. Keeps
+                  drinks cold for 24 hours.
+                </p>
+                <span class="personalize-price">$19.00</span>
+                <button class="btn btn-primary btn-full open-customize-modal" 
+        data-name="Water Bottle" 
+        data-price="19.00" 
+        data-img="../../assets/images/fproducts/water-bottle.jpg">Customize</button>
+              </div>
+            </div>
+
+            <div class="personalize-card">
+              <div class="personalize-card-img">
+                <img
+                  src="https://i.pinimg.com/1200x/69/45/c0/6945c0acad2d715a91cc51a44badec01.jpg"
+                  alt="Watch Band"
+                />
+              </div>
+              <div class="personalize-card-content">
+                <h3>Custom Watch Band</h3>
+                <p>
+                  Choose colors and add your initials. Fits all Apple Watch &
+                  Garmin models.
+                </p>
+                <span class="personalize-price">$25.00</span>
+                <button class="btn btn-primary btn-full">Customize</button>
+              </div>
+            </div>
+
+            <div class="personalize-card">
+              <div class="personalize-card-img">
+                <img
+                  src="../../assets/images/fproducts/training-mat.jpg"
+                  alt="Yoga Mat"
+                />
+              </div>
+              <div class="personalize-card-content">
+                <h3>Personalized Yoga Mat</h3>
+                <p>
+                  Add your monogram or favorite mantra to the corner. Non-slip,
+                  eco-friendly cork.
+                </p>
+                <span class="personalize-price">$35.00</span>
+                <button class="btn btn-primary btn-full">Customize</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div
+      class="customize-modal-overlay"
+      id="customizeModal"
+      style="display: none"
+    >
+      <div class="customize-modal">
+        <div class="modal-preview-col">
+          <div class="preview-image-container">
+            <img
+              src="../../assets/images/fproducts/water-bottle.jpg"
+              alt="Preview"
+              id="modal-preview-img"
+            />
+            <div class="modal-preview-text" id="modal-preview-text">SOPHIA</div>
+          </div>
+        </div>
+
+        <div class="modal-options-col">
+          <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+          <h2 id="modal-item-name">Customize your Water Bottle</h2>
+
+          <div class="form-group">
+            <label for="engrave-text-input"
+              >Enter text (max 15 characters)</label
+            >
+            <input
+              type="text"
+              id="engrave-text-input"
+              class="form-control"
+              placeholder="e.g., Sophia"
+              maxlength="15"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Select font</label>
+            <div class="font-selector" id="fontSelector">
+              <button
+                class="font-option active"
+                data-font="Arial, sans-serif"
+                style="font-family: Arial, sans-serif"
+              >
+                Sans-serif
+              </button>
+              <button
+                class="font-option"
+                data-font="'Times New Roman', serif"
+                style="font-family: 'Times New Roman', serif"
+              >
+                Serif
+              </button>
+              <button
+                class="font-option"
+                data-font="'Brush Script MT', cursive"
+                style="
+                  font-family: 'Brush Script MT', cursive;
+                  font-size: 1.2rem;
+                "
+              >
+                Script
+              </button>
+            </div>
+          </div>
+
+          <div class="price-summary">
+            <div class="summary-row">
+              <span>Base Price:</span>
+              <span id="modal-base-price">$19.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Engraving Fee:</span>
+              <span id="modal-fee">$5.00</span>
+            </div>
+            <div class="summary-row total">
+              <strong>Total:</strong>
+              <strong id="modal-total">$24.00</strong>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" class="btn btn-secondary" id="modalCancelBtn">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary">
+              Confirm & Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="../../modules/public/about.html">About FitCycle</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/account.js"></script>
+    <script src="../../assets/js/personalize.js"></script> </body>
+</html>
+  </body>
+</html>

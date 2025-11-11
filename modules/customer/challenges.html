@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenges | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/account.css" />
+    <link rel="stylesheet" href="../../assets/css/challenges.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">FitCycle</a>
+        <div class="header-center-group">
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Find product, example: 'running shoes'"
+            />
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../public/subscription-plans.html">Rent</a></li>
+              <li><a href="../../modules/product/product.html">Shop</a></li>
+              <li><a href="../../modules/public/about.html">About Us</a></li>
+              <li><a href="../../modules/public/faq.html">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="auth-section logged-in">
+          <a href="cart.html" class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-badge">3</span>
+          </a>
+          <a href="account.html" class="user-avatar-link">
+            <img
+              src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+              alt="User Avatar"
+              class="user-avatar-img"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="account-main">
+      <div class="account-layout">
+        <aside class="account-sidebar">
+          <nav class="account-nav">
+            <ul>
+              <li>
+                <a href="account.html"
+                  ><i class="fa-solid fa-user-pen"></i> Personal Info</a
+                >
+              </li>
+              <li>
+                <a href="rental-history.html"
+                  ><i class="fa-solid fa-clock-rotate-left"></i> Rental
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="personalize.html"
+                  ><i class="fa-solid fa-wand-magic-sparkles"></i> Personalize
+                  Gear</a
+                >
+              </li>
+              <li>
+                <a href="challenges.html" class="active"
+                  ><i class="fa-solid fa-trophy"></i> Challenges</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-truck"></i> Shipping Addresses</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-lock"></i> Change Password</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-heart"></i> My Interests</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-ruler"></i> Body Sizing</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+              </li>
+              <li>
+                <a href="#" class="danger-link"
+                  ><i class="fa-solid fa-trash-can"></i> Delete Account</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="account-content">
+          <h1>Community Challenges</h1>
+          <p class="account-subtitle">
+            Join challenges, stay motivated, and earn rewards.
+          </p>
+
+          <div class="challenge-tabs">
+            <button class="tab-btn active" data-tab="active-challenges">
+              Active Challenges
+            </button>
+            <button class="tab-btn" data-tab="my-progress">My Progress</button>
+            <button class="tab-btn" data-tab="completed">Completed</button>
+          </div>
+
+          <div class="challenge-list active" id="active-challenges">
+            <div class="challenge-grid">
+              <div class="challenge-card">
+                <div class="challenge-card-image">
+                  <img
+                    src="https://runforyourlife.uk/wp-content/uploads/2023/03/50km-pace-charts.webp"
+                    alt="Running"
+                  />
+                  <span class="challenge-card-badge running">🏃 Running</span>
+                </div>
+                <div class="challenge-card-content">
+                  <h3>The 50km November Run</h3>
+                  <div class="challenge-card-stats">
+                    <div>
+                      <i class="fa-solid fa-bullseye"></i> Goal:
+                      <strong>50 km</strong>
+                    </div>
+                    <div>
+                      <i class="fa-solid fa-gift"></i> Reward:
+                      <strong>10% Off Voucher</strong>
+                    </div>
+                  </div>
+                  <div class="challenge-card-footer">
+                    <div class="participants">
+                      <i class="fa-solid fa-users"></i> 1,204 participants
+                    </div>
+                    <a href="#" class="btn btn-primary btn-small"
+                      >View & Join</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="challenge-card">
+                <div class="challenge-card-image">
+                  <img
+                    src="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Gym"
+                  />
+                  <span class="challenge-card-badge gym">🏋️ Gym/Fitness</span>
+                </div>
+                <div class="challenge-card-content">
+                  <h3>30-Day Strength</h3>
+                  <div class="challenge-card-stats">
+                    <div>
+                      <i class="fa-solid fa-bullseye"></i> Goal:
+                      <strong>30 Workouts</strong>
+                    </div>
+                    <div>
+                      <i class="fa-solid fa-gift"></i> Reward:
+                      <strong>Exclusive Badge</strong>
+                    </div>
+                  </div>
+                  <div class="challenge-card-footer">
+                    <div class="participants">
+                      <i class="fa-solid fa-users"></i> 891 participants
+                    </div>
+                    <a href="#" class="btn btn-primary btn-small"
+                      >View & Join</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="challenge-card">
+                <div class="challenge-card-image">
+                  <img
+                    src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Yoga"
+                  />
+                  <span class="challenge-card-badge yoga">🧘 Yoga</span>
+                </div>
+                <div class="challenge-card-content">
+                  <h3>Morning Mobility</h3>
+                  <div class="challenge-card-stats">
+                    <div>
+                      <i class="fa-solid fa-bullseye"></i> Goal:
+                      <strong>10 consecutive days</strong>
+                    </div>
+                    <div>
+                      <i class="fa-solid fa-gift"></i> Reward:
+                      <strong>$5 Credit</strong>
+                    </div>
+                  </div>
+                  <div class="challenge-card-footer">
+                    <div class="participants">
+                      <i class="fa-solid fa-users"></i> 2,310 participants
+                    </div>
+                    <a href="#" class="btn btn-primary btn-small"
+                      >View & Join</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-list" id="my-progress" style="display: none">
+            <p>
+              You haven't joined any challenges yet.
+              <a href="#" class="form-link">Explore active challenges</a> to get
+              started!
+            </p>
+            <div class="challenge-grid">
+              <div class="challenge-card">
+                <div class="challenge-card-image">
+                  <img
+                    src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Running"
+                  />
+                  <span class="challenge-card-badge running">🏃 Running</span>
+                </div>
+                <div class="challenge-card-content">
+                  <h3>The 50km November Run</h3>
+                  <div class="challenge-card-progress">
+                    <label>Progress: 35.5km / 50km</label>
+                    <div class="progress-bar-container">
+                      <div class="progress-bar-fill" style="width: 71%"></div>
+                    </div>
+                  </div>
+                  <div class="challenge-card-footer">
+                    <div class="participants">
+                      <strong>19 days left</strong>
+                    </div>
+                    <a href="#" class="btn btn-secondary btn-small"
+                      >View Progress</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="challenge-list" id="completed" style="display: none">
+            <p>No completed challenges yet. Keep going!</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="../../modules/public/about.html">About FitCycle</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/challenges.js"></script>
+  </body>
+</html>
