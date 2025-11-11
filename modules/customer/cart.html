@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/cart.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">FitCycle</a>
+        <div class="header-center-group">
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Find product, example: 'running shoes'"
+            />
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../public/subscription-plans.html">Rent</a></li>
+              <li><a href="../../modules/product/product.html">Shop</a></li>
+              <li><a href="../../modules/public/about.html">About Us</a></li>
+              <li><a href="../../modules/public/faq.html">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="auth-section logged-in">
+          <a href="cart.html" class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-badge">3</span>
+          </a>
+          <a href="account.html" class="user-avatar-link">
+            <img
+              src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+              alt="User Avatar"
+              class="user-avatar-img"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="cart-main">
+      <h1>Your Cart (3 items)</h1>
+
+      <div class="cart-layout">
+        <section class="cart-items">
+          <div class="cart-tabs">
+            <button class="tab-btn active" data-tab="purchase-list">
+              Purchases (2)
+            </button>
+            <button class="tab-btn" data-tab="rental-list">Rentals (1)</button>
+          </div>
+
+          <div class="cart-list" id="purchase-list">
+            <div class="cart-item">
+              <img
+                src="https://i.pinimg.com/1200x/14/05/c8/1405c8e33a7e436aeac702126963dc8f.jpg"
+                alt="Lululemon Align Pant"
+                class="cart-item-img"
+              />
+              <div class="cart-item-details">
+                <h3>Lululemon Align Pant</h3>
+                <p class="item-meta">
+                  Type: <strong>Used (FitScore™ 95/100)</strong>
+                </p>
+                <p class="item-meta">Size: M | Color: Black</p>
+                <div class="quantity-stepper">
+                  <button type="button" class="quantity-btn minus">-</button>
+                  <input type="number" value="1" min="1" />
+                  <button type="button" class="quantity-btn plus">+</button>
+                </div>
+              </div>
+              <div class="cart-item-price">
+                <span>950,000đ</span>
+                <button class="remove-item-btn">
+                  <i class="fa-solid fa-trash-can"></i> Remove
+                </button>
+              </div>
+            </div>
+            <div class="cart-item">
+              <img
+                src="../../assets/images/fproducts/water-bottle.jpg"
+                alt="Water Bottle"
+                class="cart-item-img"
+              />
+              <div class="cart-item-details">
+                <h3>Personalized Water Bottle</h3>
+                <p class="item-meta">Type: <strong>New</strong></p>
+                <p class="item-meta">Engraving: "Sophia"</p>
+                <div class="quantity-stepper">
+                  <button type="button" class="quantity-btn minus">-</button>
+                  <input type="number" value="1" min="1" />
+                  <button type="button" class="quantity-btn plus">+</button>
+                </div>
+              </div>
+              <div class="cart-item-price">
+                <span>$19.00</span>
+                <button class="remove-item-btn">
+                  <i class="fa-solid fa-trash-can"></i> Remove
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-list" id="rental-list" style="display: none">
+            <div class="cart-item">
+              <img
+                src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                alt="Nike Pegasus"
+                class="cart-item-img"
+              />
+              <div class="cart-item-details">
+                <h3>Nike Air Zoom Pegasus 41</h3>
+                <p class="item-meta">Type: <strong>Rental</strong></p>
+                <p class="item-meta">Size: EU 42 | Color: White/Blue</p>
+                <div class="form-group" style="margin-top: 10px">
+                  <label for="billing-cycle" style="font-size: 0.9rem"
+                    >Billing Cycle:</label
+                  >
+                  <select
+                    id="billing-cycle"
+                    class="form-control"
+                    style="max-width: 150px; padding: 0.5rem"
+                  >
+                    <option value="monthly" selected>Monthly ($15/mo)</option>
+                    <option value="yearly">Yearly ($144/yr)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="cart-item-price">
+                <span>$15.00/month</span>
+                <button class="remove-item-btn">
+                  <i class="fa-solid fa-trash-can"></i> Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="order-summary">
+          <h2>Order Summary</h2>
+          <div class="summary-row">
+            <span>Purchase Subtotal:</span>
+            <span id="purchase-subtotal">$58.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Rental Subtotal (due today):</span>
+            <span id="rental-subtotal">$15.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping:</span>
+            <span>Calculated at next step</span>
+          </div>
+
+          <div class="promo-code">
+            <label for="promo">Promo Code</label>
+            <div class="promo-input-group">
+              <input
+                type="text"
+                id="promo"
+                class="form-control"
+                placeholder="Enter code"
+              />
+              <button class="btn btn-secondary">Apply</button>
+            </div>
+          </div>
+
+          <div class="summary-total">
+            <strong>Total Due Today</strong>
+            <strong>$73.00</strong>
+          </div>
+
+          <a href="checkout.html" class="btn btn-primary btn-full"
+            >Proceed to Checkout</a
+          >
+          <a
+            href="../../modules/product/product.html"
+            class="continue-shopping-link"
+          >
+            <i class="fa-solid fa-arrow-left"></i> Continue Shopping
+          </a>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="../../modules/public/about.html">About FitCycle</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/cart.js"></script>
+  </body>
+</html>

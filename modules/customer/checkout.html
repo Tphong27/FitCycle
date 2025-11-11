@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/cart.css" />
+    <link rel="stylesheet" href="../../assets/css/checkout.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">FitCycle</a>
+        <div class="auth-section logged-in">
+          <a href="account.html" class="user-avatar-link">
+            <img
+              src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+              alt="User Avatar"
+              class="user-avatar-img"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="cart-main checkout-main">
+      <div class="cart-layout">
+        <section class="checkout-steps">
+          <a href="cart.html" class="back-link" style="margin-bottom: 2rem">
+            <i class="fa-solid fa-arrow-left"></i> Back to Cart
+          </a>
+
+          <details class="checkout-step" open>
+            <summary>
+              <span class="step-number">1</span>
+              <h2>Shipping Address</h2>
+            </summary>
+            <div class="checkout-step-content">
+              <p class="step-subtitle">
+                Select your default address or add a new one.
+              </p>
+              <div class="address-selector">
+                <label class="address-card active">
+                  <input type="radio" name="address" checked />
+                  <div class="card-content">
+                    <strong>Nguyen Van A</strong>
+                    <p>123 Vo Van Tan, District 3, HCMC</p>
+                    <p>Phone: 0912345678</p>
+                  </div>
+                  <span class="card-edit-link">Edit</span>
+                </label>
+                <div class="address-card add-new">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>Add New Address</span>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="checkout-step" open>
+            <summary>
+              <span class="step-number">2</span>
+              <h2>Shipping Method</h2>
+            </summary>
+            <div class="checkout-step-content">
+              <label class="shipping-option active">
+                <input type="radio" name="shipping" checked />
+                <div class="shipping-option-details">
+                  <strong>GHTK (Standard)</strong>
+                  <small>Delivered in 24 hours</small>
+                </div>
+                <span class="shipping-option-price">Free</span>
+              </label>
+              <label class="shipping-option">
+                <input type="radio" name="shipping" />
+                <div class="shipping-option-details">
+                  <strong>Ahamove (Express)</strong>
+                  <small>Delivered in 3-6 hours</small>
+                </div>
+                <span class="shipping-option-price">35,000đ</span>
+              </label>
+            </div>
+          </details>
+
+          <details class="checkout-step" open>
+            <summary>
+              <span class="step-number">3</span>
+              <h2>Payment Method</h2>
+            </summary>
+            <div class="checkout-step-content">
+              <div class="payment-selector">
+                <button
+                  class="payment-option active"
+                  data-payment="credit-card"
+                >
+                  <i class="fa-solid fa-credit-card"></i> Credit Card
+                </button>
+                <button class="payment-option" data-payment="momo">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png"
+                    alt="Momo"
+                  />
+                  Momo
+                </button>
+                <button class="payment-option" data-payment="vnpay">
+                  <img
+                    src="https://stcd02206177151.cloud.edgevnpay.vn/assets/images/logo-icon/logo-primary.svg"
+                    alt="VNPAY"
+                  />
+                  VNPAY
+                </button>
+              </div>
+
+              <div class="payment-form" id="credit-card-form">
+                <div class="form-group">
+                  <label for="card-number">Card Number</label>
+                  <input
+                    type="text"
+                    id="card-number"
+                    class="form-control"
+                    placeholder="0000 0000 0000 0000"
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="card-expiry">Expiry Date</label>
+                    <input
+                      type="text"
+                      id="card-expiry"
+                      class="form-control"
+                      placeholder="MM / YY"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="card-cvc">CVC</label>
+                    <input
+                      type="text"
+                      id="card-cvc"
+                      class="form-control"
+                      placeholder="123"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="payment-form" id="momo-form" style="display: none">
+                <p>
+                  You will be redirected to the MoMo app to complete payment.
+                </p>
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <aside class="order-summary">
+          <h2>Order Summary</h2>
+
+          <div class="summary-item-list">
+            <div class="summary-item">
+              <img
+                src="https://i.pinimg.com/1200x/14/05/c8/1405c8e33a7e436aeac702126963dc8f.jpg"
+                alt="Lululemon"
+              />
+              <div>
+                <h3>Lululemon Align Pant (Used)</h3>
+                <p>Qty: 1</p>
+              </div>
+              <span>950,000đ</span>
+            </div>
+            <div class="summary-item">
+              <img
+                src="../../assets/images/fproducts/water-bottle.jpg"
+                alt="Bottle"
+              />
+              <div>
+                <h3>Personalized Water Bottle</h3>
+                <p>Qty: 1</p>
+              </div>
+              <span>$19.00</span>
+            </div>
+            <div class="summary-item">
+              <img
+                src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                alt="Nike"
+              />
+              <div>
+                <h3>Nike Pegasus 41 (Rental)</h3>
+                <p>Qty: 1</p>
+              </div>
+              <span>$15.00/mo</span>
+            </div>
+          </div>
+
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="purchase-subtotal">$73.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping:</span>
+            <span id="shipping-total">Free</span>
+          </div>
+
+          <div class="summary-total">
+            <strong>Total Due Today</strong>
+            <strong>$73.00</strong>
+          </div>
+
+          <div class="subscription-notice">
+            <i class="fa-solid fa-rotate"></i>
+            <p>
+              By placing your order, you agree to our Terms of Service and
+              authorize a recurring monthly payment of
+              <strong>$15.00</strong> for your rental items.
+            </p>
+          </div>
+
+          <button class="btn btn-primary btn-full" id="placeOrderBtn">
+            Confirm & Place Order
+          </button>
+        </aside>
+      </div>
+    </main>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/checkout.js"></script>
+  </body>
+</html>

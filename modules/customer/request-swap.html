@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Swap | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/account.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">FitCycle</a>
+        <div class="header-center-group">
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Find product, example: 'running shoes'"
+            />
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../public/subscription-plans.html">Rent</a></li>
+              <li><a href="../../modules/product/product.html">Shop</a></li>
+              <li><a href="../../modules/public/about.html">About Us</a></li>
+              <li><a href="../../modules/public/faq.html">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="auth-section logged-in">
+          <a href="#" class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-badge">2</span>
+          </a>
+          <a href="account.html" class="user-avatar-link">
+            <img
+              src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+              alt="User Avatar"
+              class="user-avatar-img"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="account-main">
+      <div class="account-layout">
+        <aside class="account-sidebar">
+          <nav class="account-nav">
+            <ul>
+              <li>
+                <a href="account.html"
+                  ><i class="fa-solid fa-user-pen"></i> Personal Info</a
+                >
+              </li>
+              <li>
+                <a href="rental-history.html" class="active"
+                  ><i class="fa-solid fa-clock-rotate-left"></i> Rental
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-truck"></i> Shipping Addresses</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-lock"></i> Change Password</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-heart"></i> My Interests</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-ruler"></i> Body Sizing</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+              </li>
+              <li>
+                <a href="#" class="danger-link"
+                  ><i class="fa-solid fa-trash-can"></i> Delete Account</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="account-content">
+          <a href="rental-details.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Rental Details
+          </a>
+          <h1>Request a Swap</h1>
+          <p class="account-subtitle">
+            Select a new item to swap with your current rental.
+          </p>
+
+          <div class="swap-layout">
+            <div class="swap-column">
+              <h3><i class="fa-solid fa-arrow-turn-down"></i> Returning</h3>
+              <div class="swap-item-card">
+                <img
+                  src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                  alt="Nike Pegasus"
+                />
+                <div class="swap-item-info">
+                  <h4>Nike Air Zoom Pegasus 41</h4>
+                  <p>Size: EU 42</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swap-column">
+              <h3><i class="fa-solid fa-arrow-turn-up"></i> Receiving</h3>
+
+              <div id="swap-search-step">
+                <label for="swap-search-input">Find your next item</label>
+                <div class="swap-search-bar">
+                  <input
+                    type="text"
+                    id="swap-search-input"
+                    class="form-control"
+                    placeholder="Search for 'Adidas Ultraboost'..."
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="swapSearchBtn"
+                  >
+                    <i class="fa-solid fa-search"></i>
+                  </button>
+                </div>
+                <div
+                  class="swap-search-results"
+                  id="swapResults"
+                  style="display: none"
+                >
+                  <div
+                    class="swap-result-item"
+                    data-name="Adidas Ultraboost"
+                    data-size="EU 42"
+                    data-img="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/688ee2041c12490cb7ba9ffc957f6209_9366/Y-3_Ultraboost_5_Beige_JR6648_01_02_hover_standard.jpg"
+                  >
+                    <img
+                      src="https://assets.adidas.com/images/h_80,f_auto,q_auto,fl_lossy,c_fill,g_auto/688ee2041c12490cb7ba9ffc957f6209_9366/Y-3_Ultraboost_5_Beige_JR6648_01_02_hover_standard.jpg"
+                      alt="Adidas"
+                    />
+                    <div>
+                      <h4>Adidas Y-3 Ultraboost 5</h4>
+                      <p>Size: EU 42 | $15/month</p>
+                    </div>
+                  </div>
+                  <div
+                    class="swap-result-item"
+                    data-name="Reebok Nano X4"
+                    data-size="EU 42"
+                    data-img="https://cdn.shopify.com/s/files/1/0862/7834/0912/files/100074684_FLT_eCom-tif.png?v=1736436867&width=1600"
+                  >
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/0862/7834/0912/files/100074684_FLT_eCom-tif.png?v=1736436867&width=80&height=80"
+                      alt="Reebok"
+                    />
+                    <div>
+                      <h4>Reebok Nano X4</h4>
+                      <p>Size: EU 42 | $14/month</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="swap-confirm-step" style="display: none">
+                <div class="swap-item-card selected-new-item">
+                  <img
+                    id="newItemImg"
+                    src=""
+                    alt="New Item"
+                    class="new-item-preview-img"
+                  />
+                  <div class="swap-item-info">
+                    <h4 id="newItemName"></h4>
+                    <p id="newItemSize"></p>
+                  </div>
+                  <a href="#" id="changeItemLink" class="form-link">Change</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swap-summary" id="swapSummary" style="display: none">
+            <h4>Swap Summary</h4>
+            <div class="summary-row">
+              <span>New Item Rental Fee:</span>
+              <span>$15.00/month</span>
+            </div>
+            <div class="summary-row">
+              <span>Swap Fee (Pro Plan):</span>
+              <span>$0.00</span>
+            </div>
+            <div class="summary-row total">
+              <strong>Total Due Today:</strong>
+              <strong>$0.00</strong>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="window.location.href='rental-details.html'"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="confirmSwapBtn"
+              disabled
+            >
+              Confirm Swap
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="auth-modal-overlay" id="swapSuccessModal" style="display: none">
+      <div class="auth-modal">
+        <div class="modal-icon">
+          <i class="fa-solid fa-check-circle"></i>
+        </div>
+        <h2 class="modal-title">Swap Confirmed!</h2>
+        <p class="modal-message">
+          Your new item is being processed. We'll send instructions for
+          returning your old item.
+        </p>
+        <a href="rental-history.html" class="btn btn-primary modal-btn"
+          >View Rental History</a
+        >
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="../../modules/public/about.html">About FitCycle</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/account.js"></script>
+  </body>
+</html>

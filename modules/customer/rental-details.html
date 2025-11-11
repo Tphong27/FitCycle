@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rental Details | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/account.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">FitCycle</a>
+        <div class="header-center-group">
+          <div class="header-search">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="Find product, example: 'running shoes'"
+            />
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../public/subscription-plans.html">Rent</a></li>
+              <li><a href="../../modules/product/product.html">Shop</a></li>
+              <li><a href="../../modules/public/about.html">About Us</a></li>
+              <li><a href="../../modules/public/faq.html">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="auth-section logged-in">
+          <a href="#" class="cart-icon">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="cart-badge">2</span>
+          </a>
+          <a href="account.html" class="user-avatar-link">
+            <img
+              src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+              alt="User Avatar"
+              class="user-avatar-img"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="account-main">
+      <div class="account-layout">
+        <aside class="account-sidebar">
+          <nav class="account-nav">
+            <ul>
+              <li>
+                <a href="account.html"
+                  ><i class="fa-solid fa-user-pen"></i> Personal Info</a
+                >
+              </li>
+              <li>
+                <a href="rental-history.html" class="active"
+                  ><i class="fa-solid fa-clock-rotate-left"></i> Rental
+                  History</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-truck"></i> Shipping Addresses</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-lock"></i> Change Password</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-heart"></i> My Interests</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-ruler"></i> Body Sizing</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bell"></i> Notifications</a>
+              </li>
+              <li>
+                <a href="#" class="danger-link"
+                  ><i class="fa-solid fa-trash-can"></i> Delete Account</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="account-content">
+          <a href="rental-history.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Rental History
+          </a>
+          <h1>Rental Details</h1>
+          <p class="account-subtitle">Order ID: #FC-1024-RN</p>
+
+          <div class="rental-detail-layout">
+            <div class="rental-detail-gallery">
+              <img
+                src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                alt="Nike Pegasus"
+              />
+              <div class="rental-main-actions">
+                <a href="request-swap.html" class="btn btn-primary"
+                  ><i class="fa-solid fa-right-left"></i> Request Swap</a
+                >
+                <button class="btn btn-secondary">
+                  <i class="fa-solid fa-box-open"></i> Return Item
+                </button>
+                <a href="#" class="form-link">Report an issue</a>
+              </div>
+            </div>
+
+            <div class="rental-detail-info">
+              <h2>Nike Air Zoom Pegasus 41</h2>
+              <span class="rental-status in-use">In Use</span>
+              <p class="product-specs">
+                <span>Category: Running Shoes</span>
+                <span>Color: White/Blue</span>
+                <span>Size: EU 42</span>
+              </p>
+
+              <div class="status-tracker">
+                <div class="status-step active">
+                  <i class="fa-solid fa-receipt"></i>
+                  <span>Processing</span>
+                  <small>Oct 15, 2025</small>
+                </div>
+                <div class="status-step active">
+                  <i class="fa-solid fa-truck-fast"></i>
+                  <span>Shipped</span>
+                  <small>Oct 15, 2025</small>
+                </div>
+                <div class="status-step active">
+                  <i class="fa-solid fa-person-running"></i>
+                  <span>In Use</span>
+                  <small>Oct 16, 2025</small>
+                </div>
+                <div class="status-step">
+                  <i class="fa-solid fa-undo"></i>
+                  <span>Returned</span>
+                </div>
+              </div>
+
+              <div class="detail-card-grid">
+                <div class="detail-summary-card">
+                  <h4>Rental Period</h4>
+                  <p><strong>Start Date:</strong> Oct 16, 2025</p>
+                  <p><strong>Next Billing:</strong> Nov 16, 2025</p>
+                  <p><strong>Plan:</strong> Pro Plan ($19/month)</p>
+                </div>
+                <div class="detail-summary-card">
+                  <h4>Shipping Details</h4>
+                  <p><strong>Tracking:</strong> GHTK-12345678</p>
+                  <p>
+                    <strong>Address:</strong> Nguyen Van A, 123 Vo Van Tan, D.3,
+                    HCMC
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li>
+              <a href="../../modules/public/about.html">About FitCycle</a>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Recruitment</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 FitCycle Vietnam. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>

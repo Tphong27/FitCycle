@@ -295,3 +295,487 @@
     grid-column: auto;
   }
 }
+
+/* =================================
+   ACCOUNT: RENTAL HISTORY ADDITIONS
+   ================================= */
+
+/* --- Rental Tabs --- */
+.rental-tabs {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--medium-gray);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px; /* Align with bottom border */
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* --- Rental List --- */
+.rental-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rental-card {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.rental-card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--light-gray);
+}
+
+.rental-card-info {
+  flex: 1; /* Take remaining space */
+  min-width: 200px;
+}
+
+.rental-card-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.rental-card-info p {
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+  margin: 0.25rem 0;
+}
+
+.rental-card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto; /* Push buttons to the right */
+}
+
+.rental-status {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.rental-status.in-use {
+  background-color: #d1fae5; /* primary-light */
+  color: #065f46; /* primary-dark */
+}
+.rental-status.processing {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.rental-status.returned {
+  background-color: #f3f4f6; /* light-gray */
+  color: #4b5563; /* medium-gray */
+}
+
+/* Responsive adjustments for rental card */
+@media (max-width: 600px) {
+  .rental-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rental-card-actions {
+    margin-left: 0;
+    width: 100%;
+  }
+  .rental-card-actions .btn {
+    flex: 1;
+  }
+}
+
+/* =================================
+   ACCOUNT: RENTAL DETAILS ADDITIONS
+   ================================= */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+.back-link i {
+  font-size: 0.8rem;
+}
+
+.rental-detail-layout {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1rem;
+}
+
+/* Left Gallery */
+.rental-detail-gallery {
+  flex: 0 0 300px; /* Fixed width */
+}
+.rental-detail-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.rental-main-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.rental-main-actions .btn {
+  width: 100%;
+  padding: 0.9rem;
+}
+.rental-main-actions .btn i {
+  margin-right: 0.5rem;
+}
+.rental-main-actions .form-link {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Right Info */
+.rental-detail-info {
+  flex: 1;
+}
+.rental-detail-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin: 0;
+}
+.rental-detail-info .rental-status {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+.product-specs {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.product-specs span {
+  background-color: var(--light-gray);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+}
+
+/* Status Tracker */
+.status-tracker {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.status-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  flex-basis: 80px; /* Width of each step */
+  color: #9ca3af; /* Default color: inactive */
+}
+.status-step i {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+  border: 2px solid var(--border-color);
+  color: #9ca3af;
+  z-index: 2;
+}
+.status-step span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+.status-step small {
+  font-size: 0.8rem;
+}
+
+/* Connecting line */
+.status-step:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 21px; /* Half of icon height */
+  right: 50%; /* Start from center of previous step */
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+/* Active State */
+.status-step.active {
+  color: var(--dark-gray);
+}
+.status-step.active i {
+  background-color: #d1fae5;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+/* Active line */
+.status-step.active:not(:first-child)::before {
+  background-color: var(--primary-color);
+}
+
+/* Detail Cards */
+.detail-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.detail-summary-card {
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.detail-summary-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 0.75rem;
+}
+.detail-summary-card p {
+  margin: 0.25rem 0;
+  color: var(--medium-gray);
+}
+.detail-summary-card p strong {
+  color: var(--dark-gray);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rental-detail-layout {
+    flex-direction: column;
+  }
+  .rental-detail-gallery {
+    flex: 0 0 auto; /* Reset width */
+    max-width: 300px;
+    align-self: center;
+  }
+  .detail-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .status-tracker {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .status-step {
+    flex-direction: row;
+    gap: 1rem;
+    text-align: left;
+  }
+  .status-step:not(:first-child)::before {
+    display: none; /* Hide horizontal line on mobile */
+  }
+  .status-step span {
+    margin-top: 0;
+  }
+}
+
+/* =================================
+   ACCOUNT: REQUEST SWAP ADDITIONS
+   ================================= */
+.swap-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.swap-column h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.swap-column h3 i {
+  color: var(--medium-gray);
+}
+.swap-column:first-child h3 i {
+  color: var(--badge-red); /* Red for 'returning' */
+}
+.swap-column:last-child h3 i {
+  color: var(--primary-color); /* Green for 'receiving' */
+}
+
+.swap-item-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--light-gray);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+.swap-item-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+.swap-item-info h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+  margin: 0;
+}
+.swap-item-info p {
+  font-size: 0.9rem;
+  color: var(--medium-gray);
+  margin: 0.25rem 0 0 0;
+}
+.swap-item-card .form-link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.9rem;
+}
+
+.swap-search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.swap-search-bar .form-control {
+  flex: 1;
+}
+.swap-search-bar .btn {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.swap-search-results {
+  margin-top: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.swap-result-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.swap-result-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+.swap-result-item:hover {
+  background-color: var(--light-gray);
+}
+.swap-result-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.swap-result-item h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+.swap-result-item p {
+  font-size: 0.85rem;
+  color: var(--medium-gray);
+  margin: 0;
+}
+
+.swap-summary {
+  max-width: 500px;
+  margin: 2rem 0 0 auto; /* Align to the right */
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.swap-summary h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: var(--medium-gray);
+  margin-bottom: 0.5rem;
+}
+.summary-row.total {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .swap-layout {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+  .swap-summary {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+}
