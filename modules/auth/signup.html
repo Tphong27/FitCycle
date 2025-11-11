@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/auth.css" />
+  </head>
+
+  <body class="auth-body">
+    <div class="auth-container">
+      <aside class="auth-sidebar">
+        <div class="auth-sidebar-content">
+          <a href="../../index.html" class="auth-logo">FitCycle</a>
+          <h2 class="auth-welcome-title">Start your healthy journey!</h2>
+          <p class="auth-welcome-subtitle">
+            Get 50% off your first package as a new member.
+          </p>
+
+          <div class="auth-illustration">
+            <i
+              class="fa-solid fa-user-plus"
+              style="font-size: 80px; opacity: 0.5"
+            ></i>
+            <i
+              class="fa-solid fa-tags"
+              style="
+                font-size: 40px;
+                opacity: 0.8;
+                position: absolute;
+                top: 30%;
+                left: 60%;
+              "
+            ></i>
+          </div>
+
+          <ul class="auth-benefits">
+            <li>
+              <i class="fa-solid fa-dumbbell"></i>
+              <span>12,000+ gear waiting for you</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-vr-cardboard"></i>
+              <span>Free AR Try-on</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-box-open"></i>
+              <span>Hassle-free returns</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="auth-form-panel">
+        <form class="auth-form" id="signUpForm" novalidate>
+          <h1>Create Account</h1>
+
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input
+              type="text"
+              id="fullname"
+              class="form-control"
+              placeholder="e.g., John Doe"
+              required
+            />
+            <span class="error-message" id="fullname-error"
+              >Please enter your full name.</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="example@email.com"
+              required
+            />
+            <span class="error-message" id="email-error"
+              >Invalid email address.</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              class="form-control"
+              placeholder="e.g., 0912345678"
+              required
+            />
+            <span class="error-message" id="phone-error"
+              >Invalid phone number.</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="••••••••"
+                required
+              />
+              <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+            </div>
+            <div class="password-strength">
+              <div class="strength-bar" id="strengthBar"></div>
+              <span class="strength-text" id="strengthText">Weak</span>
+            </div>
+            <ul class="password-checklist" id="passwordChecklist">
+              <li id="check-length">At least 8 characters</li>
+              <li id="check-uppercase">Contains an uppercase letter</li>
+              <li id="check-number">Contains a number</li>
+            </ul>
+          </div>
+
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              class="form-control"
+              placeholder="••••••••"
+              required
+            />
+            <span class="error-message" id="confirm-error"
+              >Passwords do not match.</span
+            >
+          </div>
+
+          <div class="form-options">
+            <label class="form-checkbox" id="terms-label">
+              <input type="checkbox" id="terms" name="terms" />
+              I agree to the
+              <a href="#" class="form-link">Terms of Service</a> and
+              <a href="#" class="form-link">Privacy Policy</a>.
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            id="signupButton"
+            class="btn btn-primary auth-btn-full"
+            disabled
+          >
+            Sign Up
+          </button>
+
+          <div class="auth-divider">
+            <span>or sign up with</span>
+          </div>
+
+          <div class="social-login-group">
+            <button type="button" class="btn btn-social">
+              <img
+                src="https://www.vectorlogo.zone/logos/google/google-icon.svg"
+                alt="Google"
+              />
+              <span>Google</span>
+            </button>
+            <button type="button" class="btn btn-social">
+              <img
+                src="https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg"
+                alt="Facebook"
+              />
+              <span>Facebook</span>
+            </button>
+            <button type="button" class="btn btn-social">
+              <img
+                src="https://www.vectorlogo.zone/logos/apple/apple-icon.svg"
+                alt="Apple"
+              />
+              <span>Apple</span>
+            </button>
+          </div>
+
+          <p class="auth-switch-link">
+            Already have an account?
+            <a href="signin.html">Sign in</a>
+          </p>
+        </form>
+      </main>
+    </div>
+
+    <div class="auth-modal-overlay" id="successModal" style="display: none">
+      <div class="auth-modal">
+        <div class="modal-icon">
+          <i class="fa-solid fa-check-circle"></i>
+        </div>
+        <h2 class="modal-title">Sign Up Successful!</h2>
+        <p class="modal-message">
+          Please check your email to verify your account.
+        </p>
+        <a href="../../index.html" class="btn btn-primary modal-btn"
+          >Go to Homepage</a
+        >
+      </div>
+    </div>
+
+    <script src="../../assets/js/auth-signup.js"></script>
+  </body>
+</html>
