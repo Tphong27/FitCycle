@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Process Return | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="returns.html" class="active"
+                ><i class="fa-solid fa-undo"></i> Returns</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <div class="header-breadcrumb">
+            <a href="returns.html" class="breadcrumb-link">Returns</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <h1>Process Return #RT-0125</h1>
+          </div>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="order-detail-layout">
+            <div class="order-detail-main">
+              <div class="widget-card">
+                <h3>Item Requested for Return</h3>
+                <div class="table-container">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>SKU</th>
+                        <th>Type</th>
+                        <th>Qty</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="product-table-item">
+                            <img
+                              src="https://i.pinimg.com/1200x/14/05/c8/1405c8e33a7e436aeac702126963dc8f.jpg"
+                              alt="Lululemon"
+                              class="product-table-img"
+                            />
+                            <span>Lululemon Align Pant</span>
+                          </div>
+                        </td>
+                        <td>LULU-ALG-BLK-M</td>
+                        <td>Used</td>
+                        <td>1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="widget-card return-reason-card">
+                <h3>
+                  <i class="fa-solid fa-comment-dots"></i> Customer Reason
+                </h3>
+                <p><strong>Item not as described</strong></p>
+                <p class="form-help-text">
+                  "The FitScore was 95/100, but there is a clear stain on the
+                  left leg that was not mentioned in the description. Requesting
+                  a full refund."
+                </p>
+              </div>
+
+              <div class="widget-card">
+                <h3>Return Timeline</h3>
+                <ul class="order-timeline">
+                  <li class="timeline-item active">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <strong>Request Submitted</strong>
+                    <span>Customer requested a return.</span>
+                    <small>Nov 10, 2025 at 09:15 AM</small>
+                  </li>
+                  <li class="timeline-item">
+                    <i class="fa-solid fa-check-double"></i>
+                    <strong>Request Approved</strong>
+                    <span>(Pending)</span>
+                  </li>
+                  <li class="timeline-item">
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+                    <strong>Item Received</strong>
+                    <span>(Pending)</span>
+                  </li>
+                  <li class="timeline-item">
+                    <i class="fa-solid fa-wallet"></i>
+                    <strong>Refunded / Completed</strong>
+                    <span>(Pending)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="order-detail-sidebar">
+              <div class="widget-card">
+                <h3>Take Action</h3>
+                <div class="form-group">
+                  <label for="return-status">Update Return Status</label>
+                  <select id="return-status" class="form-control">
+                    <option value="Pending Approval" selected>
+                      Pending Approval
+                    </option>
+                    <option value="Approved (Waiting for item)">
+                      Approved (Waiting for item)
+                    </option>
+                    <option value="Item Received (Processing)">
+                      Item Received (Processing)
+                    </option>
+                    <option value="Completed (Refunded)">
+                      Completed (Refunded)
+                    </option>
+                    <option value="Rejected">Rejected</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="admin-notes"
+                    >Notes (Internal or for Customer)</label
+                  >
+                  <textarea
+                    id="admin-notes"
+                    class="form-control"
+                    rows="3"
+                    placeholder="e.g., Return approved. Please use the provided shipping label."
+                  ></textarea>
+                </div>
+                <button class="btn btn-primary btn-full" id="saveStatusBtn">
+                  Save Changes
+                </button>
+              </div>
+
+              <div class="widget-card">
+                <h3>Customer</h3>
+                <div class="customer-info-list">
+                  <a href="#"><i class="fa-solid fa-user"></i> Nguyen Van A</a>
+                  <a href="mailto:demo@fitcycle.vn"
+                    ><i class="fa-solid fa-envelope"></i> demo@fitcycle.vn</a
+                  >
+                  <a href="tel:0912345678"
+                    ><i class="fa-solid fa-phone"></i> 0912345678</a
+                  >
+                </div>
+              </div>
+
+              <div class="widget-card order-link-card">
+                <i class="fa-solid fa-file-invoice"></i>
+                <div>
+                  <strong>Original Order</strong>
+                  <a href="order-details.html" class="form-link"
+                    >View Order #FC-1020-RN</a
+                  >
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast-notification" id="toast">
+      <i class="fa-solid fa-check-circle"></i>
+      <span>Return status updated!</span>
+    </div>
+
+    <script src="../../assets/js/admin-order-details.js"></script>
+  </body>
+</html>

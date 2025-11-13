@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Management | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html" class="active"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>Order Management</h1>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="widget-card full-width">
+            <div class="admin-filters">
+              <div class="product-tabs">
+                <button class="tab-btn active">
+                  All <span class="count-badge">15</span>
+                </button>
+                <button class="tab-btn">
+                  Pending <span class="count-badge">2</span>
+                </button>
+                <button class="tab-btn">
+                  Confirmed <span class="count-badge">3</span>
+                </button>
+                <button class="tab-btn">
+                  Shipped <span class="count-badge">5</span>
+                </button>
+                <button class="tab-btn">
+                  Delivered <span class="count-badge">4</span>
+                </button>
+                <button class="tab-btn">
+                  Cancelled <span class="count-badge">1</span>
+                </button>
+              </div>
+              <div class="filter-controls">
+                <div class="product-search-bar">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search by Order ID or Customer..."
+                  />
+                  <button class="btn btn-secondary btn-small">
+                    <i class="fa-solid fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td><strong>#FC-1025-RN</strong></td>
+                    <td>demo@fitcycle.vn</td>
+                    <td>Nov 11, 2025</td>
+                    <td>$15.00</td>
+                    <td>Rental</td>
+                    <td>
+                      <span class="status-badge processing">Confirmed</span>
+                    </td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-eye"></i> View</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td><strong>#FC-1024-PU</strong></td>
+                    <td>minhanh@gmail.com</td>
+                    <td>Nov 10, 2025</td>
+                    <td>$42.00</td>
+                    <td>Purchase</td>
+                    <td><span class="status-badge shipped">Shipped</span></td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-eye"></i> View</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td><strong>#FC-1023-PU</strong></td>
+                    <td>hoanglong@gmail.com</td>
+                    <td>Nov 08, 2025</td>
+                    <td>$120.00</td>
+                    <td>Purchase</td>
+                    <td>
+                      <span class="status-badge delivered">Delivered</span>
+                    </td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-eye"></i> View</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td><strong>#FC-1022-RN</strong></td>
+                    <td>user@example.com</td>
+                    <td>Nov 07, 2025</td>
+                    <td>$35.00</td>
+                    <td>Rental</td>
+                    <td><span class="status-badge danger">Pending</span></td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-eye"></i> View</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

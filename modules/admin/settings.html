@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Settings | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="returns.html"
+                ><i class="fa-solid fa-undo"></i> Returns</a
+              >
+            </li>
+            <li>
+              <a href="users.html"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="analytics.html"
+                ><i class="fa-solid fa-chart-line"></i> Analytics</a
+              >
+            </li>
+            <li>
+              <a href="settings.html" class="active"
+                ><i class="fa-solid fa-gear"></i> Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>System Settings</h1>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <form class="form-layout-simple">
+            <div class="widget-card">
+              <h3>
+                <i class="fa-solid fa-wallet"></i> Payment Gateway Settings
+              </h3>
+              <p class="form-help-text">
+                Configure API keys for payment gateways.
+              </p>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="momo-key">Momo API Key</label>
+                  <input
+                    type="password"
+                    id="momo-key"
+                    class="form-control"
+                    value="••••••••••••••••"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="vnpay-hash">VNPAY Hash Secret</label>
+                  <input
+                    type="password"
+                    id="vnpay-hash"
+                    class="form-control"
+                    value="••••••••••••••••"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="currency">Default Currency</label>
+                <select id="currency" class="form-control">
+                  <option value="VND">VND (Vietnam Dong)</option>
+                  <option value="USD">USD (US Dollar)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3><i class="fa-solid fa-truck"></i> Shipping Settings</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="shipping-standard">Standard Shipping Fee</label>
+                  <input
+                    type="number"
+                    id="shipping-standard"
+                    class="form-control"
+                    value="0"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="shipping-express">Express Shipping Fee</label>
+                  <input
+                    type="number"
+                    id="shipping-express"
+                    class="form-control"
+                    value="35000"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3><i class="fa-solid fa-sliders"></i> System Settings</h3>
+              <div class="form-group">
+                <label for="admin-email">Admin Email</label>
+                <input
+                  type="email"
+                  id="admin-email"
+                  class="form-control"
+                  value="admin@fitcycle.vn"
+                />
+                <p class="form-help-text">
+                  Email address to receive system notifications.
+                </p>
+              </div>
+              <div class="form-group">
+                <label>Maintenance Mode</label>
+                <div class="toggle-switch-group">
+                  <label class="toggle-switch-large">
+                    <input type="checkbox" id="maintenance-mode" />
+                    <span class="slider-large"></span>
+                  </label>
+                  <span id="maintenance-status">Site is currently Online.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions-sticky">
+              <button type="button" class="btn btn-secondary">
+                Discard Changes
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="saveSettingsBtn"
+              >
+                Save Settings
+              </button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast-notification" id="toast">
+      <i class="fa-solid fa-check-circle"></i>
+      <span>Settings saved successfully!</span>
+    </div>
+
+    <script src="../../assets/js/admin-settings.js"></script>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitScore Management | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html" class="active"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-list-ul"></i> Categories</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-file-invoice"></i> Orders</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>FitScore™ Management</h1>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="widget-card full-width">
+            <div class="admin-filters">
+              <div class="product-tabs">
+                <button class="tab-btn active">Pending Inspection (3)</button>
+                <button class="tab-btn">Recently Scored (50)</button>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>SKU</th>
+                    <th>Return ID</th>
+                    <th>Returned By</th>
+                    <th>Date Returned</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://i.pinimg.com/1200x/14/05/c8/1405c8e33a7e436aeac702126963dc8f.jpg"
+                          alt="Lululemon"
+                          class="product-table-img"
+                        />
+                        <span>Lululemon Align Pant</span>
+                      </div>
+                    </td>
+                    <td>LULU-ALG-BLK-M</td>
+                    <td>#RT-0125</td>
+                    <td>demo@fitcycle.vn</td>
+                    <td>Nov 10, 2025</td>
+                    <td>
+                      <button
+                        class="btn btn-primary btn-small open-score-modal"
+                      >
+                        <i class="fa-solid fa-star-half-stroke"></i> Inspect &
+                        Score
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                          alt="Pegasus 41"
+                          class="product-table-img"
+                        />
+                        <span>Nike Air Zoom Pegasus 41</span>
+                      </div>
+                    </td>
+                    <td>NK-PEG41-WHT-42</td>
+                    <td>#RT-0124</td>
+                    <td>user2@fitcycle.vn</td>
+                    <td>Nov 10, 2025</td>
+                    <td>
+                      <button
+                        class="btn btn-primary btn-small open-score-modal"
+                      >
+                        <i class="fa-solid fa-star-half-stroke"></i> Inspect &
+                        Score
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="../../assets/images/fproducts/compression-shirt.jpg"
+                          alt="UA Shirt"
+                          class="product-table-img"
+                        />
+                        <span>UA Compression Shirt</span>
+                      </div>
+                    </td>
+                    <td>UA-COMP-MD-BLK</td>
+                    <td>#RT-0123</td>
+                    <td>user3@fitcycle.vn</td>
+                    <td>Nov 09, 2025</td>
+                    <td>
+                      <button
+                        class="btn btn-primary btn-small open-score-modal"
+                      >
+                        <i class="fa-solid fa-star-half-stroke"></i> Inspect &
+                        Score
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="auth-modal-overlay" id="fitScoreModal" style="display: none">
+      <div class="auth-modal fitscore-modal">
+        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        <h2 class="modal-title">Inspect Product & Assign FitScore™</h2>
+        <p class="modal-message">
+          Product: <strong>Lululemon Align Pant (LULU-ALG-BLK-M)</strong>
+        </p>
+
+        <form
+          id="fitScoreForm"
+          class="auth-form"
+          style="text-align: left; max-width: none"
+        >
+          <div class="form-group">
+            <label for="score-condition">1. Condition (0-50 pts)</label>
+            <div class="range-slider">
+              <input
+                type="range"
+                id="score-condition"
+                class="form-range"
+                min="0"
+                max="50"
+                value="45"
+              />
+              <span class="range-value" id="condition-val">45</span>
+            </div>
+            <small>Signs of wear, stains, or damage.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="score-age">2. Age (0-30 pts)</label>
+            <div class="range-slider">
+              <input
+                type="range"
+                id="score-age"
+                class="form-range"
+                min="0"
+                max="30"
+                value="25"
+              />
+              <span class="range-value" id="age-val">25</span>
+            </div>
+            <small>How old is the item? (30 = New, 0 = 5+ years)</small>
+          </div>
+
+          <div class="form-group">
+            <label for="score-usage">3. Usage (0-20 pts)</label>
+            <div class="range-slider">
+              <input
+                type="range"
+                id="score-usage"
+                class="form-range"
+                min="0"
+                max="20"
+                value="20"
+              />
+              <span class="range-value" id="usage-val">20</span>
+            </div>
+            <small
+              >Estimated usage frequency. (20 = Unused, 0 = Heavily Used)</small
+            >
+          </div>
+
+          <div class="fitscore-total-box">
+            <span>Calculated FitScore™</span>
+            <strong id="final-fitscore">90 / 100</strong>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary auth-btn-full"
+            style="margin-top: 1rem"
+          >
+            Save Score & List as "Used"
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../assets/js/admin-fitscore.js"></script>
+  </body>
+</html>

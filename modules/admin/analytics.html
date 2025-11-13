@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-funnel@1.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0"></script>
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="returns.html"
+                ><i class="fa-solid fa-undo"></i> Returns</a
+              >
+            </li>
+            <li>
+              <a href="users.html"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="analytics.html" class="active"
+                ><i class="fa-solid fa-chart-line"></i> Analytics</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>Analytics</h1>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="report-header">
+            <div class="form-group">
+              <label for="date-range">Select Date Range</label>
+              <select id="date-range" class="form-control">
+                <option value="30">Last 30 days</option>
+                <option value="90">Last 90 days</option>
+                <option value="year">This Year</option>
+              </select>
+            </div>
+          </div>
+
+          <section class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-info">
+                <span class="stat-title">Total Visitors</span>
+                <span class="stat-value">112,890</span>
+                <span class="stat-change positive">+5.2%</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-info">
+                <span class="stat-title">Conversion Rate</span>
+                <span class="stat-value">3.8%</span>
+                <span class="stat-change positive">+0.5%</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-info">
+                <span class="stat-title">Avg. Order Value</span>
+                <span class="stat-value">$36.48</span>
+                <span class="stat-change negative">-1.2%</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-info">
+                <span class="stat-title">Customer Churn Rate</span>
+                <span class="stat-value">4.1%</span>
+                <span class="stat-change positive">(Goal: < 5%)</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="widget-grid">
+            <div class="widget-card">
+              <h3>Conversion Funnel (30d)</h3>
+              <div class="chart-container">
+                <canvas id="conversionFunnelChart"></canvas>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3>Revenue by Source (30d)</h3>
+              <div
+                class="chart-container"
+                style="max-height: 280px; margin: auto"
+              >
+                <canvas id="revenueSourceChart"></canvas>
+              </div>
+            </div>
+
+            <div class="widget-card full-width">
+              <h3>Top Traffic Sources (30d)</h3>
+              <div class="table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Source</th>
+                      <th>Visitors</th>
+                      <th>Signups</th>
+                      <th>Conv. Rate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Google (Organic)</strong></td>
+                      <td>45,102</td>
+                      <td>412</td>
+                      <td>0.91%</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Facebook Ads</strong></td>
+                      <td>30,500</td>
+                      <td>350</td>
+                      <td>1.15%</td>
+                    </tr>
+                    <tr>
+                      <td><strong>TikTok (Organic)</strong></td>
+                      <td>25,100</td>
+                      <td>210</td>
+                      <td>0.84%</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Direct</strong></td>
+                      <td>12,188</td>
+                      <td>180</td>
+                      <td>1.48%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../assets/js/admin-analytics.js"></script>
+  </body>
+</html>

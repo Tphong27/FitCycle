@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Details | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html" class="active"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <div class="header-breadcrumb">
+            <a href="orders.html" class="breadcrumb-link">Orders</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <h1>Order #FC-1025-RN</h1>
+          </div>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="order-detail-layout">
+            <div class="order-detail-main">
+              <div class="widget-card">
+                <h3>Order Items</h3>
+                <div class="table-container">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Product</th>
+                        <th>SKU</th>
+                        <th>Type</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="product-table-item">
+                            <img
+                              src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                              alt="Pegasus 41"
+                              class="product-table-img"
+                            />
+                            <span>Nike Air Zoom Pegasus 41</span>
+                          </div>
+                        </td>
+                        <td>NK-PEG41-WHT-42</td>
+                        <td>Rental</td>
+                        <td>1</td>
+                        <td>$15.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="widget-card">
+                <h3>Order Timeline</h3>
+                <ul class="order-timeline">
+                  <li class="timeline-item complete">
+                    <i class="fa-solid fa-check"></i>
+                    <strong>Order Placed</strong>
+                    <span>Customer placed order.</span>
+                    <small>Nov 11, 2025 at 10:30 AM</small>
+                  </li>
+                  <li class="timeline-item active">
+                    <i class="fa-solid fa-box"></i>
+                    <strong>Order Confirmed</strong>
+                    <span>Payment successful. Awaiting shipment.</span>
+                    <small>Nov 11, 2025 at 10:31 AM</small>
+                  </li>
+                  <li class="timeline-item">
+                    <i class="fa-solid fa-truck"></i>
+                    <strong>Order Shipped</strong>
+                    <span>(Pending)</span>
+                  </li>
+                  <li class="timeline-item">
+                    <i class="fa-solid fa-house-user"></i>
+                    <strong>Order Delivered</strong>
+                    <span>(Pending)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="order-detail-sidebar">
+              <div class="widget-card">
+                <h3>Order Status</h3>
+                <div class="form-group">
+                  <label for="order-status">Update Status</label>
+                  <select id="order-status" class="form-control">
+                    <option value="Pending">Pending</option>
+                    <option value="Confirmed" selected>Confirmed</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Cancelled">Cancelled</option>
+                  </select>
+                </div>
+                <button class="btn btn-primary btn-full" id="saveStatusBtn">
+                  Save Changes
+                </button>
+              </div>
+
+              <div class="widget-card">
+                <h3>Customer</h3>
+                <div class="customer-info-list">
+                  <a href="#"><i class="fa-solid fa-user"></i> Nguyen Van A</a>
+                  <a href="mailto:demo@fitcycle.vn"
+                    ><i class="fa-solid fa-envelope"></i> demo@fitcycle.vn</a
+                  >
+                  <a href="tel:0912345678"
+                    ><i class="fa-solid fa-phone"></i> 0912345678</a
+                  >
+                </div>
+              </div>
+
+              <div class="widget-card">
+                <h3>Shipping Address</h3>
+                <address>
+                  <strong>Nguyen Van A</strong><br />
+                  123 Vo Van Tan, Ward 6<br />
+                  District 3, Ho Chi Minh City<br />
+                  Vietnam
+                </address>
+              </div>
+
+              <div class="widget-card">
+                <h3>Payment</h3>
+                <div class="payment-info">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/vi/f/fe/MoMo_Logo.png"
+                    alt="Momo"
+                  />
+                  <span>Paid via <strong>Momo</strong></span>
+                </div>
+                <div
+                  class="summary-row total"
+                  style="margin-top: 1rem; padding-top: 1rem"
+                >
+                  <strong>Total:</strong>
+                  <strong>$15.00</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="toast-notification" id="toast">
+      <i class="fa-solid fa-check-circle"></i>
+      <span>Order status updated!</span>
+    </div>
+
+    <script src="../../assets/js/admin-order-details.js"></script>
+  </body>
+</html>

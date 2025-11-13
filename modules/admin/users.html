@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="returns.html"
+                ><i class="fa-solid fa-undo"></i> Returns</a
+              >
+            </li>
+            <li>
+              <a href="users.html" class="active"
+                ><i class="fa-solid fa-users"></i> Users</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>User Management</h1>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="widget-card full-width">
+            <div class="admin-filters">
+              <div class="product-tabs" id="adminTabContainer">
+                <button class="tab-btn active" data-tab="all">
+                  All <span class="count-badge">4</span>
+                </button>
+                <button class="tab-btn" data-tab="customers">
+                  Customers <span class="count-badge">2</span>
+                </button>
+                <button class="tab-btn" data-tab="vendors">
+                  Vendors <span class="count-badge">1</span>
+                </button>
+                <button class="tab-btn" data-tab="admins">
+                  Admins <span class="count-badge">1</span>
+                </button>
+              </div>
+              <div class="filter-controls">
+                <div class="product-search-bar">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search by name or email..."
+                  />
+                  <button class="btn btn-secondary btn-small">
+                    <i class="fa-solid fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-container admin-tab-content active" id="all">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>User Role</th>
+                    <th>Joined Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                          alt="Admin User"
+                          class="product-table-img"
+                        />
+                        <div>
+                          <strong>Admin User</strong>
+                          <small>admin@fitcycle.vn</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="role-badge admin">Admin</span></td>
+                    <td>Oct 01, 2025</td>
+                    <td><span class="status-badge delivered">Active</span></td>
+                    <td>
+                      <button class="action-btn edit open-edit-modal">
+                        <i class="fa-solid fa-pen"></i> Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://placehold.co/40x40/E0E7FF/4338CA?text=A"
+                          alt="Nguyen Van A"
+                          class="product-table-img"
+                        />
+                        <div>
+                          <strong>Nguyen Van A</strong>
+                          <small>demo@fitcycle.vn</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="role-badge customer">Customer</span></td>
+                    <td>Oct 15, 2025</td>
+                    <td><span class="status-badge delivered">Active</span></td>
+                    <td>
+                      <button class="action-btn edit open-edit-modal">
+                        <i class="fa-solid fa-pen"></i> Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://placehold.co/40x40/f0abfc/4a044e?text=V"
+                          alt="Nike Official"
+                          class="product-table-img"
+                        />
+                        <div>
+                          <strong>Nike Official</strong>
+                          <small>vendor@nike.com</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="role-badge vendor">Vendor</span></td>
+                    <td>Oct 20, 2025</td>
+                    <td><span class="status-badge delivered">Active</span></td>
+                    <td>
+                      <button class="action-btn edit open-edit-modal">
+                        <i class="fa-solid fa-pen"></i> Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://placehold.co/40x40/fef2f2/b91c1c?text=B"
+                          alt="Blocked User"
+                          class="product-table-img"
+                        />
+                        <div>
+                          <strong>Blocked User</strong>
+                          <small>blocked@example.com</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="role-badge customer">Customer</span></td>
+                    <td>Oct 22, 2025</td>
+                    <td><span class="status-badge danger">Inactive</span></td>
+                    <td>
+                      <button class="action-btn edit open-edit-modal">
+                        <i class="fa-solid fa-pen"></i> Edit
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              class="admin-tab-content"
+              id="customers"
+              style="display: none"
+            ></div>
+            <div
+              class="admin-tab-content"
+              id="vendors"
+              style="display: none"
+            ></div>
+            <div
+              class="admin-tab-content"
+              id="admins"
+              style="display: none"
+            ></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="auth-modal-overlay" id="editUserModal" style="display: none">
+      <div class="auth-modal" style="max-width: 500px">
+        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        <h2 class="modal-title">Edit User</h2>
+        <p class="modal-message">User: <strong>demo@fitcycle.vn</strong></p>
+
+        <form
+          id="editUserForm"
+          class="auth-form"
+          style="text-align: left; max-width: none"
+        >
+          <div class="form-group">
+            <label for="user-role">User Role</label>
+            <select id="user-role" class="form-control">
+              <option value="Customer" selected>Customer</option>
+              <option value="Vendor">Vendor</option>
+              <option value="Admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="user-status">User Status</label>
+            <select id="user-status" class="form-control">
+              <option value="Active" selected>Active</option>
+              <option value="Inactive">Inactive</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </div>
+          <div class="modal-actions" style="margin-top: 2rem">
+            <button type="button" class="btn btn-secondary" id="modalCancelBtn">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../assets/js/admin-users.js"></script>
+  </body>
+</html>

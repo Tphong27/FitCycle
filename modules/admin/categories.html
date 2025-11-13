@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Categories | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html" class="active"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-file-invoice"></i> Orders</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>Manage Categories</h1>
+          <div class="admin-profile">
+            <a href="add-product.html" class="btn btn-primary btn-small"
+              ><i class="fa-solid fa-plus"></i> Add New Product</a
+            >
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="category-layout">
+            <div class="widget-card">
+              <h3>Add New Category</h3>
+              <form id="addCategoryForm">
+                <div class="form-group">
+                  <label for="category-name">Name</label>
+                  <input
+                    type="text"
+                    id="category-name"
+                    class="form-control"
+                    placeholder="e.g., Running"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="category-slug">Slug</label>
+                  <input
+                    type="text"
+                    id="category-slug"
+                    class="form-control"
+                    placeholder="e.g., running"
+                  />
+                  <p class="form-help-text">
+                    The "slug" is the URL-friendly version of the name.
+                  </p>
+                </div>
+                <div class="form-group">
+                  <label for="category-parent">Parent Category</label>
+                  <select id="category-parent" class="form-control">
+                    <option value="0">None (Top Level)</option>
+                    <option value="1">— Running</option>
+                    <option value="2">— Gym/Fitness</option>
+                    <option value="3">— Yoga/Pilates</option>
+                    <option value="4">— Apparel</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="category-desc">Description (Optional)</label>
+                  <textarea
+                    id="category-desc"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Brief description of the category..."
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  Add New Category
+                </button>
+              </form>
+            </div>
+
+            <div class="widget-card category-table-card">
+              <div class="table-container">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Slug</th>
+                      <th>Description</th>
+                      <th>Count</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Apparel</strong></td>
+                      <td>apparel</td>
+                      <td>All types of sportswear</td>
+                      <td>15</td>
+                      <td>
+                        <button class="action-btn edit open-edit-modal">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="action-btn delete">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="category-child">
+                      <td>— Men's Apparel</td>
+                      <td>mens-apparel</td>
+                      <td></td>
+                      <td>8</td>
+                      <td>
+                        <button class="action-btn edit open-edit-modal">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="action-btn delete">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>Running</strong></td>
+                      <td>running</td>
+                      <td>Running shoes and gear</td>
+                      <td>22</td>
+                      <td>
+                        <button class="action-btn edit open-edit-modal">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="action-btn delete">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>Yoga/Pilates</strong></td>
+                      <td>yoga</td>
+                      <td>Mats, blocks, etc.</td>
+                      <td>10</td>
+                      <td>
+                        <button class="action-btn edit open-edit-modal">
+                          <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="action-btn delete">
+                          <i class="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div
+      class="auth-modal-overlay"
+      id="editCategoryModal"
+      style="display: none"
+    >
+      <div class="auth-modal" style="max-width: 600px">
+        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        <h2 class="modal-title">Edit Category</h2>
+
+        <form
+          id="editCategoryForm"
+          class="auth-form"
+          style="text-align: left; max-width: none"
+        >
+          <div class="form-group">
+            <label for="edit-category-name">Name</label>
+            <input
+              type="text"
+              id="edit-category-name"
+              class="form-control"
+              value="Running"
+            />
+          </div>
+          <div class="form-group">
+            <label for="edit-category-slug">Slug</label>
+            <input
+              type="text"
+              id="edit-category-slug"
+              class="form-control"
+              value="running"
+            />
+          </div>
+          <div class="form-group">
+            <label for="edit-category-parent">Parent Category</label>
+            <select id="edit-category-parent" class="form-control">
+              <option value="0">None (Top Level)</option>
+              <option value="1">— Running</option>
+              <option value="2">— Gym/Fitness</option>
+              <option value="3">— Yoga/Pilates</option>
+              <option value="4">— Apparel</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="edit-category-desc">Description (Optional)</label>
+            <textarea id="edit-category-desc" class="form-control" rows="4">
+Running shoes and gear</textarea
+            >
+          </div>
+          <div class="modal-actions" style="margin-top: 1rem">
+            <button type="button" class="btn btn-secondary" id="modalCancelBtn">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../assets/js/admin-categories.js"></script>
+  </body>
+</html>

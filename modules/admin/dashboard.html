@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html" class="active"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="returns.html"
+                ><i class="fa-solid fa-undo"></i> Returns</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>Admin Dashboard</h1>
+          <div class="admin-profile">
+            <a href="add-product.html" class="btn btn-primary btn-small"
+              ><i class="fa-solid fa-plus"></i> Add New Product</a
+            >
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <section class="stat-grid">
+            <div class="stat-card">
+              <div class="stat-icon revenue">
+                <i class="fa-solid fa-dollar-sign"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Total Revenue (30d)</span>
+                <span class="stat-value">$45,231.89</span>
+                <span class="stat-change positive">+12.5% vs. last month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon orders">
+                <i class="fa-solid fa-receipt"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Total Orders (30d)</span>
+                <span class="stat-value">1,240</span>
+                <span class="stat-change positive">+8.2% vs. last month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon users">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">New Customers (30d)</span>
+                <span class="stat-value">852</span>
+                <span class="stat-change positive">+15.1%</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon returns">
+                <i class="fa-solid fa-undo"></i>
+              </div>
+              <div class="stat-info">
+                <span class="stat-title">Pending Returns</span>
+                <span class="stat-value">5</span>
+                <span class="stat-change danger">2 overdue</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="widget-grid">
+            <div class="widget-card full-width">
+              <h3>Platform Revenue (Last 30 Days)</h3>
+              <div class="chart-container">
+                <canvas id="adminRevenueChart"></canvas>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3>New User Signups</h3>
+              <div class="chart-container">
+                <canvas id="adminUserChart"></canvas>
+              </div>
+            </div>
+
+            <div class="widget-card">
+              <h3>Recent Activity</h3>
+              <div class="activity-feed">
+                <div class="activity-item">
+                  <div class="activity-icon user">
+                    <i class="fa-solid fa-user-plus"></i>
+                  </div>
+                  <div class="activity-info">
+                    <p>
+                      New user <strong>minhanh@gmail.com</strong> just
+                      registered.
+                    </p>
+                    <small>15 minutes ago</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon order">
+                    <i class="fa-solid fa-receipt"></i>
+                  </div>
+                  <div class="activity-info">
+                    <p>
+                      Order <strong>#FC-1026-RNPU</strong> (Total: $73.00) was
+                      placed.
+                    </p>
+                    <small>45 minutes ago</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon vendor">
+                    <i class="fa-solid fa-store"></i>
+                  </div>
+                  <div class="activity-info">
+                    <p>
+                      Vendor <strong>Nike Official</strong> added a new product
+                      (Pending).
+                    </p>
+                    <small>2 hours ago</small>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon returns">
+                    <i class="fa-solid fa-undo"></i>
+                  </div>
+                  <div class="activity-info">
+                    <p>
+                      Return <strong>#RT-0125</strong> was submitted for
+                      approval.
+                    </p>
+                    <small>3 hours ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../assets/js/admin-dashboard.js"></script>
+  </body>
+</html>

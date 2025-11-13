@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Failed | FitCycle</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/payment-status.css" />
+  </head>
+
+  <body class="status-body">
+    <div class="status-container">
+      <div class="status-card failed">
+        <div class="status-icon failed">
+          <i class="fa-solid fa-times-circle"></i>
+        </div>
+        <h1>Payment Failed</h1>
+        <p class="status-message">
+          Unfortunately, we were unable to process your payment. Your bank may
+          have declined the transaction. Please check your details and try
+          again.
+        </p>
+
+        <div class="status-actions">
+          <a href="../customer/cart.html" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Back to Cart
+          </a>
+          <a href="../customer/checkout.html" class="btn btn-primary">
+            <i class="fa-solid fa-redo"></i> Try Again
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

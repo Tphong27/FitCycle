@@ -57,4 +57,33 @@ document.addEventListener("DOMContentLoaded", () => {
     card.classList.add("active");
     radio.checked = true;
   });
+
+  // --- Place Order Button Logic (Demo) ---
+  const placeOrderBtn = document.getElementById("placeOrderBtn");
+
+  if (placeOrderBtn) {
+    placeOrderBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // Stop default action
+
+      // Lấy CVC để mô phỏng lỗi
+      const cvcInput = document.getElementById("card-cvc");
+      const isDemoFail = cvcInput && cvcInput.value === "999";
+
+      // Add a loading state
+      placeOrderBtn.textContent = "Processing Payment...";
+      placeOrderBtn.classList.add("is-loading"); // (Cần style cho .is-loading)
+      placeOrderBtn.disabled = true;
+
+      // Simulate payment processing
+      setTimeout(() => {
+        if (isDemoFail) {
+          // On FAILED, redirect to the failed page
+          window.location.href = "../payment/failed.html";
+        } else {
+          // On SUCCESS, redirect to the success page
+          window.location.href = "../payment/success.html";
+        }
+      }, 2000); // 2-giây demo
+    });
+  }
 });

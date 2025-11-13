@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return Management | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="fitscore.html"
+                ><i class="fa-solid fa-star-half-stroke"></i> FitScore</a
+              >
+            </li>
+            <li>
+              <a href="categories.html"
+                ><i class="fa-solid fa-list-ul"></i> Categories</a
+              >
+            </li>
+            <li>
+              <a href="orders.html"
+                ><i class="fa-solid fa-file-invoice"></i> Orders</a
+              >
+            </li>
+            <li>
+              <a href="returns.html" class="active"
+                ><i class="fa-solid fa-undo"></i> Returns</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>Return Management</h1>
+          <div class="admin-profile">
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="widget-card full-width">
+            <div class="admin-filters">
+              <div class="product-tabs" id="adminTabContainer">
+                <button class="tab-btn active" data-tab="all">
+                  All <span class="count-badge">5</span>
+                </button>
+                <button class="tab-btn" data-tab="pending">
+                  Pending Approval <span class="count-badge">2</span>
+                </button>
+                <button class="tab-btn" data-tab="approved">
+                  Approved (Returning) <span class="count-badge">1</span>
+                </button>
+                <button class="tab-btn" data-tab="completed">
+                  Completed <span class="count-badge">1</span>
+                </button>
+                <button class="tab-btn" data-tab="rejected">
+                  Rejected <span class="count-badge">1</span>
+                </button>
+              </div>
+              <div class="filter-controls">
+                <div class="product-search-bar">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search by Return ID or Order ID..."
+                  />
+                  <button class="btn btn-secondary btn-small">
+                    <i class="fa-solid fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <div class="admin-tab-content active" id="all">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Return ID</th>
+                      <th>Order ID</th>
+                      <th>Customer</th>
+                      <th>Product</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>#RT-0125</strong></td>
+                      <td>#FC-1020-RN</td>
+                      <td>demo@fitcycle.vn</td>
+                      <td>Lululemon Align Pant</td>
+                      <td>Nov 10, 2025</td>
+                      <td>
+                        <span class="status-badge processing"
+                          >Pending Approval</span
+                        >
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn edit"
+                          ><i class="fa-solid fa-search"></i> Process</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>#RT-0124</strong></td>
+                      <td>#FC-1018-RN</td>
+                      <td>user2@fitcycle.vn</td>
+                      <td>Nike Pegasus 41</td>
+                      <td>Nov 10, 2025</td>
+                      <td>
+                        <span class="status-badge processing"
+                          >Pending Approval</span
+                        >
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn edit"
+                          ><i class="fa-solid fa-search"></i> Process</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>#RT-0123</strong></td>
+                      <td>#FC-1015-PU</td>
+                      <td>user3@fitcycle.vn</td>
+                      <td>UA Compression Shirt</td>
+                      <td>Nov 09, 2025</td>
+                      <td>
+                        <span class="status-badge shipped">Approved</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn edit"
+                          ><i class="fa-solid fa-eye"></i> View</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>#RT-0122</strong></td>
+                      <td>#FC-1010-PU</td>
+                      <td>hoanglong@gmail.com</td>
+                      <td>Adidas Ultraboost</td>
+                      <td>Nov 05, 2025</td>
+                      <td><span class="status-badge danger">Rejected</span></td>
+                      <td>
+                        <a href="#" class="action-btn edit"
+                          ><i class="fa-solid fa-eye"></i> View</a
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>#RT-0121</strong></td>
+                      <td>#FC-1009-RN</td>
+                      <td>minhanh@gmail.com</td>
+                      <td>Adidas Training Mat</td>
+                      <td>Nov 01, 2025</td>
+                      <td>
+                        <span class="status-badge delivered">Completed</span>
+                      </td>
+                      <td>
+                        <a href="#" class="action-btn edit"
+                          ><i class="fa-solid fa-eye"></i> View</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div
+                class="admin-tab-content"
+                id="pending"
+                style="display: none"
+              ></div>
+              <div
+                class="admin-tab-content"
+                id="approved"
+                style="display: none"
+              ></div>
+              <div
+                class="admin-tab-content"
+                id="completed"
+                style="display: none"
+              ></div>
+              <div
+                class="admin-tab-content"
+                id="rejected"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../assets/js/admin-tabs.js"></script>
+  </body>
+</html>

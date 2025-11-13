@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Management | FitCycle Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/admin.css" />
+  </head>
+
+  <body class="admin-body">
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-header">
+          <a href="../../index.html" class="logo">FitCycle</a>
+        </div>
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-tachograph-digital"></i> Dashboard</a
+              >
+            </li>
+            <li>
+              <a href="products.html" class="active"
+                ><i class="fa-solid fa-box-archive"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-list-ul"></i> Categories</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-file-invoice"></i> Orders</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-users"></i> Users</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-header">
+          <h1>Product Management</h1>
+          <div class="admin-profile">
+            <a href="#" class="btn btn-primary btn-small"
+              ><i class="fa-solid fa-plus"></i> Add New Product</a
+            >
+            <div class="user-profile-menu">
+              <img
+                src="https://placehold.co/40x40/c084fc/4a044e?text=A"
+                alt="Admin"
+                class="user-avatar-img"
+              />
+              <span>Admin User</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <div class="widget-card full-width">
+            <div class="admin-filters">
+              <div class="product-tabs">
+                <button class="tab-btn active">
+                  All <span class="count-badge">50</span>
+                </button>
+                <button class="tab-btn">
+                  Active <span class="count-badge">45</span>
+                </button>
+                <button class="tab-btn">
+                  Pending <span class="count-badge">5</span>
+                </button>
+                <button class="tab-btn">
+                  For Sale <span class="count-badge">20</span>
+                </button>
+                <button class="tab-btn">
+                  For Rent <span class="count-badge">30</span>
+                </button>
+              </div>
+              <div class="filter-controls">
+                <select class="form-control">
+                  <option value="">All Vendors</option>
+                  <option value="nike">Nike Official</option>
+                  <option value="adidas">Adidas</option>
+                  <option value="fitcycle">FitCycle (In-house)</option>
+                </select>
+                <div class="product-search-bar">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search by name or SKU..."
+                  />
+                  <button class="btn btn-secondary btn-small">
+                    <i class="fa-solid fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>Product</th>
+                    <th>SKU</th>
+                    <th>Vendor</th>
+                    <th>Type</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://upthereathletics.com/cdn/shop/files/nike-mens-vomero-18-white-black-blue-hero-1_1160x.jpg?v=1759708817"
+                          alt="Pegasus 41"
+                          class="product-table-img"
+                        />
+                        <span>Nike Air Zoom Pegasus 41</span>
+                      </div>
+                    </td>
+                    <td>NK-PEG41-WHT-42</td>
+                    <td>Nike Official</td>
+                    <td>Rental</td>
+                    <td>15</td>
+                    <td>$15.00/mo</td>
+                    <td><span class="status-badge delivered">Active</span></td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-pen"></i
+                      ></a>
+                      <button class="action-btn delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://i.pinimg.com/1200x/14/05/c8/1405c8e33a7e436aeac702126963dc8f.jpg"
+                          alt="Lululemon"
+                          class="product-table-img"
+                        />
+                        <span>Lululemon Align Pant</span>
+                      </div>
+                    </td>
+                    <td>LULU-ALG-BLK-M</td>
+                    <td>Lululemon</td>
+                    <td>Used</td>
+                    <td>8</td>
+                    <td>$42.00</td>
+                    <td><span class="status-badge delivered">Active</span></td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-pen"></i
+                      ></a>
+                      <button class="action-btn delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="https://placehold.co/50x50/f3f4f6/1f2937?text=New+Shoe"
+                          alt="New Shoe"
+                          class="product-table-img"
+                        />
+                        <span>New Running Shoe (Pending)</span>
+                      </div>
+                    </td>
+                    <td>FC-RUN-001</td>
+                    <td>FitCycle (In-house)</td>
+                    <td>New</td>
+                    <td>100</td>
+                    <td>$120.00</td>
+                    <td>
+                      <span class="status-badge processing">Pending</span>
+                    </td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-pen"></i
+                      ></a>
+                      <button class="action-btn delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                      <div class="product-table-item">
+                        <img
+                          src="../../assets/images/fproducts/compression-shirt.jpg"
+                          alt="UA Shirt"
+                          class="product-table-img"
+                        />
+                        <span>UA Compression Shirt</span>
+                      </div>
+                    </td>
+                    <td>UA-COMP-MD-BLK</td>
+                    <td>Nike Official</td>
+                    <td>Used</td>
+                    <td>1</td>
+                    <td>$22.00</td>
+                    <td><span class="status-badge warning">Low Stock</span></td>
+                    <td>
+                      <a href="#" class="action-btn edit"
+                        ><i class="fa-solid fa-pen"></i
+                      ></a>
+                      <button class="action-btn delete">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
